@@ -13,7 +13,6 @@ from .tokens import generate_token
 from django.core.mail import send_mail ,EmailMessage
 from django.contrib.sites.shortcuts import get_current_site
 from django.template.loader import render_to_string
-from django.contrib.auth import get_user_model
 
 
 
@@ -23,7 +22,6 @@ def index(request,username):
     return render(request, 'index.html',{"username":username})
 
 def signup(request):
-    User=get_user_model()
 
     if request.method == "POST":
         username = request.POST.get("username")
@@ -95,7 +93,6 @@ def signup(request):
 
  
 def activate(request, uidb64, token):
-    User = get_user_model()
 
     user = request.user
 
@@ -118,7 +115,6 @@ def activate(request, uidb64, token):
 
 
 def signin(request):
-    User = get_user_model()
 
     if request.method =="POST":
         username=request.POST["username"]
