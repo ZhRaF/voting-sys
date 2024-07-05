@@ -1,0 +1,8 @@
+{% autoescape off %}
+
+Welcome {{ name }} to voting sys,
+Confimr your account by clicking on the link below
+
+Confirmation Link: http://{{ domain }}{% url 'activate' uidb64=uid token=token %}
+
+{% endautoescape %}

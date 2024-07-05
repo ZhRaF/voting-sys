@@ -26,6 +26,17 @@ SECRET_KEY = 'django-insecure-3*ycrapn=21in5ph#_cqce9auaw0lao4hml_dsokqhqj)$i4l6
 DEBUG = True
 
 ALLOWED_HOSTS = []
+from pathlib import Path
+from .info import *
+import os
+BASE_DIR = Path(__file__).resolve().parent.parent
+EMAIL_USE_TLS=EMAIL_USE_TLS
+EMAIL_PORT=EMAIL_PORT
+EMAIL_HOST=EMAIL_HOST
+EMAIL_HOST_PASSWORD=EMAIL_HOST_PASSWORD
+EMAIL_HOST_USER=EMAIL_HOST_USER
+
+
 
 
 # Application definition
@@ -52,11 +63,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'voting.urls'
 
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],  
+        'APP_DIRS': True,  
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -67,6 +79,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'voting.wsgi.application'
 
@@ -98,6 +111,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'OPTIONS': {
+            'min_length': 8,
+        }
     },
     {
         'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
@@ -129,3 +145,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+AUTH_USER_MODEL = 'core.NormalUser'

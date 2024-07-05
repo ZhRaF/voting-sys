@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        form {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 300px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h3 {
+            font-size: 24px;
+            margin: 0 0 10px;
+        }
+        h5 {
+            font-size: 16px;
+            margin: 0 0 20px;
+        }
+        input {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            margin-right:auto;
+            margin-left: auto;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #000;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #444;
+        }
+        .message {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border-radius: 4px;
+            position: relative;
+            margin-bottom: 10px;
+            position: relative;
+            margin-top: 15px;
+        }
+        .message button {
+            position: absolute;
+            width:10px;
+            height:10px;
+            top: 0px;
+            right: 0px;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+        .message ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: disc;
+        }
+        .message li {
+            margin: 5px 0;
+        }
+        .signin-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .signin-link a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .signin-link span {
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        <h3>Welcome here !!</h3>
+        <h5>Sign in</h5>
+        
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        
+        <button type="submit">Sign in</button>
+
+        <div class="signin-link">
+            <span>You dont have an account?</span>
+            <a href="{% url 'signup' %}">Sign up</a>
+        </div>
+        
+        {% if messages %}
+        <div class="message">
+            <button type="button" onclick="this.parentElement.remove()">
+                <i class="fa-solid fa-circle-xmark"></i>
+            </button>
+            <ul>
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </form>
+</body>
+</html>
