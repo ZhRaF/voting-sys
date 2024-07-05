@@ -2,11 +2,19 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('index',views.index,name='index'),
-
     path('signup',views.signup,name='signup'),
     path('',views.signin,name='signin'),
-
     path('activate/<uidb64>/<token>', views.activate, name='activate'),  
+    path('signout',views.signout,name='signout'),
+    path('addElection/', views.add_election, name='addElection'),
+    path('listElectionsAdmin/', views.list_elections_admin, name='listElectionsAdmin'),
+    path('electionDemands/<int:id>', views.election_demands, name='electionDemands'),
+    path('acceptDemand/<int:id>', views.accept_demand, name='acceptDemand'),
+    path('listElections/', views.list_elections, name='listElections'),
+    path('listUsers/', views.list_users, name='listUsers'),
+    path('vote/<int:id_election>', views.vote_election, name='voteElection'),
+    path('addVote/<int:id_user>/<int:id_election>/', views.add_vote, name='addVote'),
+    path('results_election/<int:id_election>/',views.results_election, name='resultsElection'),
+    path('demand_condidature/<int:id_election>/',views.demand_candidature, name='demandCandidature'),
 
-    path('signout',views.signout,name='signout'),]
+    ]

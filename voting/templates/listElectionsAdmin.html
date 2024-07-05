@@ -1,0 +1,35 @@
+{%extends 'base.html' %}
+{%block title%}add election{%endblock%}   
+{%block content%}
+<h1>Election List</h1>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Subject</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Number of Demands</th>
+            <th>Demands</th>          
+
+        </tr>
+    </thead>
+    <tbody>
+        {% for e in election_data %}
+            <tr>
+                <td>{{ e.election.id_election }}</td>
+                <td>{{ e.election.subject }}</td>
+                <td>{{ e.election.start_date }}</td>
+                <td>{{ e.election.end_date }}</td>
+                <td>{{ e.number_demands }}</td>
+                <td><a href="{% url 'electionDemands' id=e.election.id_election %}" >demands</a></td>
+
+            </tr>
+        {% empty %}
+            <tr>
+                <td colspan="4">No elections available.</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{%endblock%}

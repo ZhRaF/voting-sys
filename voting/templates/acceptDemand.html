@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}Confirm Demand Acceptance{% endblock %}
+
+{% block content %}
+<h3>Do you really want to accept the following demand?</h3>
+
+<div class="demand-details">
+    <div class="detail">
+        <strong>Demand ID:</strong> {{ demand.id_demand_candidature }}
+    </div>
+    <div class="detail">
+        <strong>Election ID:</strong> {{ demand.election.id_election }}
+    </div>
+    <div class="detail">
+        <strong>User ID:</strong> {{ demand.user.id }}
+    </div>
+    <div class="detail">
+        <strong>Date:</strong> {{ demand.date }}
+    </div>
+    <div class="detail">
+        <strong>Motivation:</strong> {{ demand.motivation }}
+    </div>
+    <div class="detail">
+        <strong>Status:</strong> {{ demand.status|yesno:"Accepted,Not accepted" }}
+    </div>
+</div>
+
+<form method="post" action="{% url 'acceptDemand' id=demand.id_demand_candidature %}">
+    {% csrf_token %}
+    <button type="submit">Accept Demand</button>
+</form>
+
+<a href="{% url 'electionDemands' id=demand.election.id_election  %}" >Cancel</a>
+
+{% endblock %}

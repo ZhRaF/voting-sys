@@ -1,0 +1,195 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.navbar-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+}
+
+.navbar-title {
+    margin-left: 1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.navbar-admin {
+    color: #ff0000;
+    margin-left: 0.5rem;
+    font-weight: bold;
+}
+
+.navbar-actions {
+    display: flex;
+    align-items: center;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile-username {
+    margin-left: 0.5rem;
+}
+
+.logout {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+    text-decoration: none;
+    color: #000;
+}
+
+.logout .icon {
+    width: 24px;
+    height: 24px;
+}
+
+.sidebar {
+    width: 16rem;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-item {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #000;
+    text-decoration: none;
+    border-radius: 0.25rem;
+}
+
+.sidebar-item:hover {
+    background-color: #e0e0e0;
+}
+
+.sidebar-dropdown {
+    position: relative;
+}
+
+.sidebar-dropdown-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    text-align: left;
+    color: #000;
+    font-size: 1rem;
+}
+
+.sidebar-dropdown-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-dropdown:hover .sidebar-dropdown-menu {
+    display: block;
+}
+
+#main-content {
+    margin-left: 16rem;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d1d5db;
+}
+
+.content {
+    padding: 1rem;
+    margin-top: 2.5rem;
+    font-size: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+/* In custom-css.css or inside a <style> tag */
+.elections-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.election-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    background-color: #fff;
+}
+
+.election-card h2 {
+    margin-top: 0;
+}
+
+.election-card p {
+    margin: 5px 0;
+}
+
+.candidates-container {
+    margin: 20px 0;
+}
+.candidate-item {
+    margin: 10px 0;
+}
+.submit-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.submit-button:hover {
+    background-color: #0056b3;
+}

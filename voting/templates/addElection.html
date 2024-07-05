@@ -1,0 +1,10 @@
+{%extends 'base.html' %}
+{%block title%}add election{%endblock%}   
+{%block content%}
+<h1>Add a New Election</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save Election</button>
+</form>
+{%endblock%}

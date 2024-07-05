@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}List of Candidates{% endblock %}
+
+{% block content %}
+<h1>List of Candidates for Election</h1>
+
+<form method="post" action="{% url 'addVote' id_user=user.id id_election=id_election %}">
+    {% csrf_token %}
+    <div class="candidates-container">
+        {% for candidate in candidates %}
+        <div class="candidate-item">
+            <input type="radio" name="selected_candidate" value="{{ candidate.id_candidate }}">
+            <label>{{ candidate.user.username }}</label>
+        </div>
+        {% empty %}
+        <p>No candidates available.</p>
+        {% endfor %}
+    </div>
+    <button type="submit" class="submit-button">Submit VOTE</button>
+</form>
+{% endblock %}

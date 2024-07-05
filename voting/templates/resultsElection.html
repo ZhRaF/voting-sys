@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Election Results{% endblock %}
+
+{% block content %}
+<h1>Results for {{ election.subject }}</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Candidate</th>
+            <th>Percentage of Votes</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for result in results_data %}
+        <tr>
+            <td>{{ result.candidate.user.username }}</td>
+            <td>{{ result.result|floatformat:2 }}%</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="2">No results available.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

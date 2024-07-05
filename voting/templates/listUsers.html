@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}List Users{% endblock %}
+{% block content %}
+<h1>List of Users</h1>
+<table>
+    <thead>
+        <tr>
+            <th>USER ID</th>
+            <th>USERNAME</th>
+            <th>FIRST NAME</th>
+            <th>LAST NAME</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.first_name }}</td>
+                <td>{{ user.last_name }}</td>
+            </tr>
+        {% empty %}
+            <tr>
+                <td colspan="4">No users available.</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

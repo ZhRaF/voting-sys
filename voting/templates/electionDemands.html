@@ -1,0 +1,35 @@
+{%extends 'base.html' %}
+{%block title%}election demands {%endblock%}   
+{%block content%}
+<h1>Election demands</h1>
+<table>
+    <thead>
+        <tr>
+            <th>election ID </th>
+            <th>user ID</th>
+            <th>date</th>
+            <th>motivation</th>
+            <th>status</th>
+            <th>Acceptation</th>          
+
+        </tr>
+    </thead>
+    <tbody>
+        {% for d in demands %}
+            <tr>
+                <td>{{ d.election.id_election }}</td>
+                <td>{{ d.user.id }}</td>
+                <td>{{ d.date }}</td>
+                <td>{{ d.motivation}}</td>
+                <td>{% if d.status == True %} accepted {%else%} not accepted {%endif%}</td>
+                <td><a href="{% url 'acceptDemand' id=d.id_demand_candidature %}">Accept candidature</a></td>
+
+            </tr>
+        {% empty %}
+            <tr>
+                <td colspan="4">No demands available.</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{%endblock%}

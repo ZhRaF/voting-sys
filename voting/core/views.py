@@ -1,7 +1,7 @@
 from django.contrib import messages
 from django.forms import ValidationError
-from django.http import Http404
-from django.shortcuts import redirect, render
+from django.http import Http404, HttpResponseForbidden
+from django.shortcuts import get_object_or_404, redirect, render
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.password_validation import validate_password
@@ -13,13 +13,24 @@ from .tokens import generate_token
 from django.core.mail import send_mail ,EmailMessage
 from django.contrib.sites.shortcuts import get_current_site
 from django.template.loader import render_to_string
+from django.contrib.auth.models import Group
+from .models import *
+from .forms import *
+from datetime import date
 
 
 
+group, created = Group.objects.get_or_create(name='Condidates')
 
-@login_required
-def index(request,username):
-    return render(request, 'index.html',{"username":username})
+def user_admin_required(view_func):
+
+    def _wrapped_view(request, *args, **kwargs):
+        if not request.user.is_superuser:
+            return HttpResponseForbidden("You are not authorized to access this page.")
+        return view_func(request, *args, **kwargs)
+    
+    return _wrapped_view
+
 
 def signup(request):
 
@@ -124,7 +135,7 @@ def signin(request):
         if user is not None: 
             login(request,user)
             messages.success(request, "You have successfully logged in.")
-            return redirect("index", username=username)
+            return redirect("listElections")
 
         else:
             if not User.objects.filter(username=username).exists(): 
@@ -141,4 +152,170 @@ def signin(request):
 def signout(request):
     logout(request)
     messages.success(request, "You have successfully logged out.")
-    return redirect("signin" )
+    return redirect("signin")
+
+
+@user_admin_required
+def add_election(request):
+    if request.method == 'POST':
+        form = ElectionForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('listElectionsAdmin')  
+    else:
+        form = ElectionForm()
+
+    return render(request, 'addElection.html', {'form': form})
+
+@user_admin_required
+def list_elections_admin(request):
+    election_data=[]
+    elections=Election.objects.all()
+    for e in elections:
+        demands=e.demand_candidatures.count()
+        election_data.append({
+            'election':e,
+            'number_demands':demands  } )
+    return render(request,"listElectionsAdmin.html",{"election_data":election_data})
+
+@user_admin_required
+def election_demands(request,id):
+    election=Election.objects.get(id_election=id)
+    print('coco')
+    demands=election.demand_candidatures.all()
+    print(demands)
+    return render(request,"electionDemands.html",{"demands":demands})
+
+@user_admin_required
+
+def accept_demand(request, id):
+    demand = get_object_or_404(DemandCandidature, id_demand_candidature=id)
+    
+    if request.method == 'POST':
+        demand.status = True
+        demand.save()
+        
+        Candidate.objects.create(user=demand.user, election=demand.election)
+        
+        user = demand.user
+        group, created = Group.objects.get_or_create(name='Candidates')
+        user.groups.add(group)
+        
+        messages.success(request, 'The new candidate has been successfully added')
+        return redirect('listElections')
+    else:
+        return render(request, 'acceptDemand.html', {'demand': demand})
+@user_admin_required
+def list_users(request):
+    users=User.objects.all()
+    return render(request, 'listUsers.html',{'users':users})
+
+# ::::::::::::::::::::::
+@login_required
+def list_elections(request):
+    elections_data = []
+    current_date = date.today()
+    elections = Election.objects.all()
+
+    for e in elections:
+        vote = False
+        if e.end_date <= current_date:
+            vote = True
+        
+        demand_candidature = False
+        if e.start_date > current_date:
+            demand_candidature = True
+        
+        elections_data.append({
+            'election': e,
+            'vote': vote,
+            'demand_candidature': demand_candidature
+        })
+    
+    return render(request, 'listElections.html', {'elections_data': elections_data})
+
+@login_required
+def vote_election(request, id_election):
+    election = get_object_or_404(Election, id_election=id_election)
+    candidates = election.candidates.all()
+    return render(request, 'voteElection.html', {'candidates': candidates, 'id_election': id_election})
+@login_required
+def add_vote(request, id_user, id_election):
+    if request.method == 'POST':
+        selected_candidate = request.POST.get('selected_candidate')
+        if selected_candidate:
+            candidate = get_object_or_404(Candidate, id_candidate=selected_candidate)
+            candidate.points += 1
+            candidate.save()
+            Vote.objects.create(user_id=id_user, candidate=candidate)
+            messages.success(request, "Your vote has been successfully added")
+            return redirect("resultsElection", id_election=id_election)
+        else:
+            messages.error(request, "No candidate selected. Please select a candidate to vote.")
+            return redirect("voteElection", id_election=id_election)
+    else:
+        return redirect('listElections')
+    
+def results_election(request, id_election):
+    try:
+        election = Election.objects.get(id_election=id_election)
+        candidates = Candidate.objects.filter(election=election)
+
+        total_votes = 0
+        results_data = []
+
+        for candidate in candidates:
+            total_votes += Vote.objects.filter(candidate=candidate).count()
+
+        if total_votes == 0:
+            total_votes = 1
+
+        for candidate in candidates:
+            candidate_votes = Vote.objects.filter(candidate=candidate).count()
+            if total_votes == 0:
+                result=0
+            else:
+                result = (candidate_votes / total_votes) * 100
+
+            results_data.append({
+                'candidate': candidate,
+                'result': result
+            })
+
+        return render(request, 'resultElection.html', {'election': election, 'results_data': results_data})
+
+    except Election.DoesNotExist:
+        return render(request, 'error.html', {'message': 'Election not found'})
+
+    except Exception as e:
+        return render(request, 'error.html', {'message': str(e)})
+
+
+from django.db import IntegrityError
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from .models import DemandCandidature, Election
+from .forms import DemandCandidatureForm
+
+@login_required
+def demand_candidature(request, id_election):
+    election = Election.objects.get(id_election=id_election)
+
+    if request.method == 'POST':
+        form = DemandCandidatureForm(request.POST)
+        if form.is_valid():
+            demand_candidature = form.save(commit=False)
+            demand_candidature.election = election
+            demand_candidature.user = request.user
+            try:
+                demand_candidature.save()
+                messages.success(request, "Your demand has been successfully submitted.")
+                return redirect('listElections')
+            except IntegrityError:
+                messages.error(request, "You have already submitted a demand for this election.")
+        else:
+            messages.error(request, "Form submission failed. Please check the details.")
+    else:
+        form = DemandCandidatureForm()
+
+    return render(request, 'demandCandidature.html', {'form': form, 'election': election})

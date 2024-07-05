@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}List of Elections{% endblock %}
+
+{% block content %}
+<h1>List of Elections</h1>
+<div class="elections-container">
+    {% for item in elections_data %}
+    <div class="election-card">
+        <h2>{{ item.election.subject }}</h2>
+        <p><strong>Start Date:</strong> {{ item.election.start_date }}</p>
+        <p><strong>End Date:</strong> {{ item.election.end_date }}</p>
+        <p>
+            {% if item.vote %}
+                <a href="{% url 'voteElection' id_election=item.election.id_election %}">VOTE</a>
+            {% else %}
+                VOTES ARE CLOSED
+            {% endif %}
+        </p>
+        <p>
+            {% if item.demand_candidature %}
+                <a href="{% url 'demandCandidature' id_election=item.election.id_election %}">Demand Candidature</a>
+            {% else %}
+                CANDIDATURES ARE CLOSED
+            {% endif %}
+        </p>
+    </div>
+    {% empty %}
+    <p>No elections available.</p>
+    {% endfor %}
+</div>
+{% endblock %}
