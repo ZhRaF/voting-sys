@@ -103,6 +103,9 @@ DATABASES = {
         'PASSWORD': 'imane09',
         'HOST': 'localhost',  
         'PORT': '3306',   
+        'OPTIONS': {
+            'sql_mode': 'STRICT_TRANS_TABLES',
+        },
     }
 }
 
@@ -170,14 +173,13 @@ MESSAGE_TAGS = {
 
 
 import os
-import logging
 
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
     'handlers': {
         'file': {
-            'level': 'DEBUG',
+            'level': 'ERROR',
             'class': 'logging.FileHandler',
             'filename': os.path.join(BASE_DIR, 'django_debug.log'),
         },
@@ -189,7 +191,7 @@ LOGGING = {
     'loggers': {
         'django': {
             'handlers': ['file', 'console'],
-            'level': 'DEBUG',
+            'level': 'ERROR',
             'propagate': True,
         },
     },
