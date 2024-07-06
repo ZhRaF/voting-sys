@@ -13,8 +13,11 @@ urlpatterns = [
     path('listElections/', views.list_elections, name='listElections'),
     path('listUsers/', views.list_users, name='listUsers'),
     path('vote/<int:id_election>', views.vote_election, name='voteElection'),
-    path('addVote/<int:id_user>/<int:id_election>/', views.add_vote, name='addVote'),
-    path('results_election/<int:id_election>/',views.results_election, name='resultsElection'),
+    path('addVote/<int:id_election>/', views.add_vote, name='addVote'),
+    path('resultsElection/<int:id_election>/',views.results_election, name='resultsElection'),
     path('demand_condidature/<int:id_election>/',views.demand_candidature, name='demandCandidature'),
+    path('listDemandCandidature/',views.list_demand_candidature, name='listDemandCandidature'),
+    path('deleteDemand/<int:id_demand>/', views.delete_demand, name='deleteDemand'),
+
 
     ]

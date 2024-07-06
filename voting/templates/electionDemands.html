@@ -22,7 +22,7 @@
                 <td>{{ d.date }}</td>
                 <td>{{ d.motivation}}</td>
                 <td>{% if d.status == True %} accepted {%else%} not accepted {%endif%}</td>
-                <td><a href="{% url 'acceptDemand' id=d.id_demand_candidature %}">Accept candidature</a></td>
+                <td>{% if d.status == False %} <a href="{% url 'acceptDemand' id=d.id_demand_candidature %}">Accept candidature</a>{%else%}done{%endif%}</td>
 
             </tr>
         {% empty %}

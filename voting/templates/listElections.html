@@ -23,6 +23,10 @@
                 CANDIDATURES ARE CLOSED
             {% endif %}
         </p>
+        <p>
+             <a href="{% url 'resultsElection' id_election=item.election.id_election %}">results</a>
+
+        </p>
     </div>
     {% empty %}
     <p>No elections available.</p>

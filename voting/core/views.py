@@ -17,7 +17,7 @@ from django.contrib.auth.models import Group
 from .models import *
 from .forms import *
 from datetime import date
-
+from django.db import IntegrityError
 
 
 group, created = Group.objects.get_or_create(name='Condidates')
@@ -135,7 +135,11 @@ def signin(request):
         if user is not None: 
             login(request,user)
             messages.success(request, "You have successfully logged in.")
-            return redirect("listElections")
+            if request.user.is_superuser:
+                 return redirect("listElectionsAdmin")
+            else:
+                 return redirect("listElections")
+
 
         else:
             if not User.objects.filter(username=username).exists(): 
@@ -187,22 +191,37 @@ def election_demands(request,id):
     return render(request,"electionDemands.html",{"demands":demands})
 
 @user_admin_required
-
 def accept_demand(request, id):
     demand = get_object_or_404(DemandCandidature, id_demand_candidature=id)
-    
+    id_election = demand.election.id_election
+
     if request.method == 'POST':
+        # Update the demand status
         demand.status = True
         demand.save()
         
-        Candidate.objects.create(user=demand.user, election=demand.election)
+        # Debugging output
+        print(f"Creating candidate for user: {demand.user} in election: {demand.election}")
         
+        # Create the candidate
+        candidate, created = Candidate.objects.get_or_create(
+            user=demand.user, 
+            election=demand.election
+        )
+        
+        if created:
+            print(f"Candidate created: {candidate}")
+        else:
+            print(f"Candidate already exists: {candidate}")
+        
+        # Add user to group
         user = demand.user
         group, created = Group.objects.get_or_create(name='Candidates')
         user.groups.add(group)
         
+        # Success message
         messages.success(request, 'The new candidate has been successfully added')
-        return redirect('listElections')
+        return redirect('electionDemands', id=id_election)
     else:
         return render(request, 'acceptDemand.html', {'demand': demand})
 @user_admin_required
@@ -219,7 +238,7 @@ def list_elections(request):
 
     for e in elections:
         vote = False
-        if e.end_date <= current_date:
+        if e.end_date >= current_date:
             vote = True
         
         demand_candidature = False
@@ -239,23 +258,40 @@ def vote_election(request, id_election):
     election = get_object_or_404(Election, id_election=id_election)
     candidates = election.candidates.all()
     return render(request, 'voteElection.html', {'candidates': candidates, 'id_election': id_election})
+
 @login_required
-def add_vote(request, id_user, id_election):
-    if request.method == 'POST':
+def add_vote(request, id_election):
+
+    
+    election = get_object_or_404(Election, id_election=id_election)
+    
+    votes = Vote.objects.filter(election=election).select_related('user')
+    
+    voters = [vote.user for vote in votes]
+
+    if request.user in voters:
+        messages.error(request, "You have already voted in this election.")
+        return redirect('resultsElection', id_election=id_election)
+    else:
         selected_candidate = request.POST.get('selected_candidate')
+        
         if selected_candidate:
-            candidate = get_object_or_404(Candidate, id_candidate=selected_candidate)
-            candidate.points += 1
-            candidate.save()
-            Vote.objects.create(user_id=id_user, candidate=candidate)
-            messages.success(request, "Your vote has been successfully added")
-            return redirect("resultsElection", id_election=id_election)
+            try:
+                candidate = get_object_or_404(Candidate, id_candidate=selected_candidate)
+                
+                candidate.points += 1
+                candidate.save()
+                
+                Vote.objects.create(user_id=request.user.id, candidate=candidate, election=election)
+                messages.success(request, "Your vote has been successfully added")
+                return redirect("resultsElection", id_election=id_election)
+            except Exception as e:
+                messages.error(request, "An error occurred while processing your vote.")
+                return redirect("voteElection", id_election=id_election)
         else:
             messages.error(request, "No candidate selected. Please select a candidate to vote.")
             return redirect("voteElection", id_election=id_election)
-    else:
-        return redirect('listElections')
-    
+@login_required
 def results_election(request, id_election):
     try:
         election = Election.objects.get(id_election=id_election)
@@ -282,20 +318,15 @@ def results_election(request, id_election):
                 'result': result
             })
 
-        return render(request, 'resultElection.html', {'election': election, 'results_data': results_data})
+        return render(request, 'resultsElection.html', {'election': election, 'results_data': results_data})
 
     except Election.DoesNotExist:
-        return render(request, 'error.html', {'message': 'Election not found'})
-
-    except Exception as e:
-        return render(request, 'error.html', {'message': str(e)})
+        messages.error(request,"election not found")
+        return render(request, 'listElections.html')
 
 
-from django.db import IntegrityError
-from django.shortcuts import render, redirect
-from django.contrib import messages
-from .models import DemandCandidature, Election
-from .forms import DemandCandidatureForm
+
+
 
 @login_required
 def demand_candidature(request, id_election):
@@ -319,3 +350,20 @@ def demand_candidature(request, id_election):
         form = DemandCandidatureForm()
 
     return render(request, 'demandCandidature.html', {'form': form, 'election': election})
+
+@login_required
+def list_demand_candidature(request):
+    user=User.objects.get(id=request.user.id)
+    demands=user.demand_candidatures.all()
+    return render(request, 'listDemandCandidature.html', {'demands':demands})
+
+@login_required
+def delete_demand(request, id_demand):
+    demand = get_object_or_404(DemandCandidature, id_demand_candidature=id_demand, user=request.user)
+    if demand.status:
+        messages.error(request, 'Accepted demands cannot be deleted.')
+    else:
+        if request.method == 'POST':
+            demand.delete()
+            messages.success(request, 'Demand deleted successfully.')
+    return redirect('listDemandCandidature')

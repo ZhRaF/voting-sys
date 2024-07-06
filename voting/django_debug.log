@@ -1,0 +1,923 @@
+Watching for file changes with StatReloader
+Waiting for apps ready_event.
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `auth_group`.`id`, `auth_group`.`name` FROM `auth_group` WHERE `auth_group`.`name` = 'Condidates' LIMIT 21; args=('Condidates',); alias=default
+Apps ready_event triggered. Sending autoreload_started signal.
+Watching dir C:\Users\PC\projects\voting sys\voting\templates with glob **/*.
+Watching dir C:\Users\PC\projects\voting sys\voting\locale with glob **/*.mo.
+Watching dir C:\Users\PC\projects\voting sys\voting\core\locale with glob **/*.mo.
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) 
+            SELECT
+                table_name,
+                table_type,
+                table_comment
+            FROM information_schema.tables
+            WHERE table_schema = DATABASE()
+            ; args=None; alias=default
+(0.000) SELECT `django_migrations`.`id`, `django_migrations`.`app`, `django_migrations`.`name`, `django_migrations`.`applied` FROM `django_migrations`; args=(); alias=default
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\sites\shortcuts.py first seen with mtime 1720128550.7376301
+File C:\Program Files\Python312\DLLs\select.pyd first seen with mtime 1696246028.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\files\storage\handler.py first seen with mtime 1720128551.0084083
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\staticfiles\checks.py first seen with mtime 1720128550.9537296
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\files\locks.py first seen with mtime 1720128551.0012481
+File C:\Program Files\Python312\Lib\collections\abc.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\contenttypes\fields.py first seen with mtime 1720128548.975247
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\template\smartif.py first seen with mtime 1720128551.2870226
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\sqlparse\filters\aligned_indent.py first seen with mtime 1720128547.2900672
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\backends\base\validation.py first seen with mtime 1720128551.0741212
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\forms\fields.py first seen with mtime 1720128551.1829937
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\staticfiles\management\commands\__init__.py first seen with mtime 1720128550.9617052
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\cache\backends\base.py first seen with mtime 1720128550.9788818
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\checks\messages.py first seen with mtime 1720128550.989051
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\utils\inspect.py first seen with mtime 1720128551.3357964
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\handlers\wsgi.py first seen with mtime 1720128551.0155568
+File C:\Program Files\Python312\Lib\asyncio\threads.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\paginator.py first seen with mtime 1720128550.9699054
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\backends\base\introspection.py first seen with mtime 1720128551.0711288
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\models\functions\math.py first seen with mtime 1720128551.1640446
+File C:\Program Files\Python312\Lib\encodings\utf_8.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\admin\utils.py first seen with mtime 1720128547.80459
+File C:\Program Files\Python312\Lib\email\quoprimime.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\re\_compiler.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\re\_parser.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\staticfiles\__init__.py first seen with mtime 1720128550.9517324
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\models\lookups.py first seen with mtime 1720128551.1436312
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\MySQLdb\connections.py first seen with mtime 1720129330.6392753
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\sqlparse\sql.py first seen with mtime 1720128547.2840822
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\asgiref\__init__.py first seen with mtime 1720128547.3887744
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\views\generic\base.py first seen with mtime 1720128551.3662467
+File C:\Program Files\Python312\Lib\email\errors.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\backends\base\client.py first seen with mtime 1720128551.0691345
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\template\loaders\base.py first seen with mtime 1720128551.296319
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\MySQLdb\cursors.py first seen with mtime 1720129330.6392753
+File C:\Program Files\Python312\DLLs\_wmi.pyd first seen with mtime 1696246028.0
+File C:\Users\PC\projects\voting sys\voting\manage.py first seen with mtime 1720128712.1464303
+File C:\Program Files\Python312\Lib\asyncio\transports.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\staticfiles\finders.py first seen with mtime 1720128550.954724
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\admin\templatetags\admin_urls.py first seen with mtime 1720128548.2994285
+File C:\Program Files\Python312\Lib\asyncio\subprocess.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\functools.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\files\uploadedfile.py first seen with mtime 1720128551.0032446
+File C:\Program Files\Python312\Lib\fnmatch.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\auth\forms.py first seen with mtime 1720128548.7359395
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\template\response.py first seen with mtime 1720128551.2860262
+File C:\Program Files\Python312\Lib\quopri.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\models\enums.py first seen with mtime 1720128551.1386442
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\checks\translation.py first seen with mtime 1720128550.9920416
+File C:\Program Files\Python312\Lib\linecache.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\asyncio\windows_events.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\models\functions\mixins.py first seen with mtime 1720128551.1650417
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\views\decorators\cache.py first seen with mtime 1720128551.359071
+File C:\Program Files\Python312\Lib\struct.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\asyncio\coroutines.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\models\fields\__init__.py first seen with mtime 1720128551.1528242
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\contenttypes\views.py first seen with mtime 1720128548.9782393
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\sessions\base_session.py first seen with mtime 1720128550.5196538
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\sqlparse\lexer.py first seen with mtime 1720128547.2829475
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\utils\regex_helper.py first seen with mtime 1720128551.3417797
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\admin\helpers.py first seen with mtime 1720128547.800509
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\serializers\__init__.py first seen with mtime 1720128551.0539691
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\views\i18n.py first seen with mtime 1720128551.3570766
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\models\sql\constants.py first seen with mtime 1720128551.1710265
+File C:\Program Files\Python312\Lib\queue.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\asyncio\constants.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\email\charset.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\re\_constants.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\utils.py first seen with mtime 1720128551.0641475
+File C:\Program Files\Python312\Lib\email\_policybase.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\backends\mysql\__init__.py first seen with mtime 1720128551.0771143
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\template\autoreload.py first seen with mtime 1720128551.2758472
+File C:\Program Files\Python312\Lib\ctypes\_endian.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\auth\password_validation.py first seen with mtime 1720128548.7399292
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\checks\database.py first seen with mtime 1720128550.9870553
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\sqlparse\cli.py first seen with mtime 1720128547.2799551
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\forms\models.py first seen with mtime 1720128551.1859865
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\templatetags\static.py first seen with mtime 1720128551.3023038
+File C:\Users\PC\projects\voting sys\voting\voting\info.py first seen with mtime 1720135167.6008203
+File C:\Program Files\Python312\Lib\_weakrefset.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\messages\__init__.py first seen with mtime 1720128549.937032
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\cache\backends\__init__.py first seen with mtime 1720128550.9778857
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\models\functions\text.py first seen with mtime 1720128551.1660404
+File C:\Program Files\Python312\Lib\concurrent\futures\_base.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\json\__init__.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\sqlparse\engine\filter_stack.py first seen with mtime 1720128547.2870746
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\apps\registry.py first seen with mtime 1720128547.5004182
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\utils\duration.py first seen with mtime 1720128551.329651
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\staticfiles\apps.py first seen with mtime 1720128550.952729
+File C:\Program Files\Python312\Lib\ast.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\platform.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\sqlparse\engine\grouping.py first seen with mtime 1720128547.2870746
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\models\deletion.py first seen with mtime 1720128551.1366477
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\views\decorators\__init__.py first seen with mtime 1720128551.3580742
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\admin\checks.py first seen with mtime 1720128547.797516
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\utils\timesince.py first seen with mtime 1720128551.3449438
+File C:\Program Files\Python312\Lib\hashlib.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\checks\files.py first seen with mtime 1720128550.9870553
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\backends\mysql\schema.py first seen with mtime 1720128551.083098
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\transaction.py first seen with mtime 1720128551.0629468
+File C:\Users\PC\projects\voting sys\voting\voting\settings.py first seen with mtime 1720271224.4006114
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\utils\termcolors.py first seen with mtime 1720128551.3427775
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\sessions\__init__.py first seen with mtime 1720128550.5166595
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\backends\ddl_references.py first seen with mtime 1720128551.0651448
+File C:\Program Files\Python312\Lib\email\mime\base.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\files\uploadhandler.py first seen with mtime 1720128551.004418
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\cache\backends\locmem.py first seen with mtime 1720128550.982871
+File C:\Program Files\Python312\Lib\urllib\__init__.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\handlers\__init__.py first seen with mtime 1720128551.0114002
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\views\generic\__init__.py first seen with mtime 1720128551.36525
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\serializers\python.py first seen with mtime 1720128551.0579581
+File C:\Program Files\Python312\Lib\email\mime\text.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\auth\tokens.py first seen with mtime 1720128548.7419221
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\messages\apps.py first seen with mtime 1720128549.938995
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\migrations\migration.py first seen with mtime 1720128551.119555
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\checks\security\base.py first seen with mtime 1720128550.9972591
+File C:\Program Files\Python312\Lib\socketserver.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\email\encoders.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\views\__init__.py first seen with mtime 1720128551.3529234
+File C:\Program Files\Python312\Lib\getpass.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\utils\translation\__init__.py first seen with mtime 1720128551.348933
+File C:\Program Files\Python312\Lib\logging\__init__.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\DLLs\unicodedata.pyd first seen with mtime 1696246030.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\contenttypes\management\__init__.py first seen with mtime 1720128549.1174104
+File C:\Program Files\Python312\Lib\zoneinfo\__init__.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\models\utils.py first seen with mtime 1720128551.1508307
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\checks\model_checks.py first seen with mtime 1720128550.9900527
+File C:\Program Files\Python312\Lib\collections\__init__.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\keyword.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\views\decorators\csrf.py first seen with mtime 1720128551.3610659
+File C:\Program Files\Python312\Lib\asyncio\futures.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\cache\utils.py first seen with mtime 1720128550.9768877
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\template\base.py first seen with mtime 1720128551.2768452
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\models\functions\comparison.py first seen with mtime 1720128551.1629086
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\utils\_os.py first seen with mtime 1720128551.3175056
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\signing.py first seen with mtime 1720128550.9719005
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\templatetags\l10n.py first seen with mtime 1720128551.3023038
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\staticfiles\management\__init__.py first seen with mtime 1720128550.960724
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\dispatch\dispatcher.py first seen with mtime 1720128551.1790047
+File C:\Program Files\Python312\Lib\concurrent\__init__.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\backends\base\features.py first seen with mtime 1720128551.0701313
+File C:\Program Files\Python312\DLLs\_lzma.pyd first seen with mtime 1696246028.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\files\base.py first seen with mtime 1720128551.0002508
+File C:\Program Files\Python312\Lib\contextvars.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\email\utils.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\backends\mysql\features.py first seen with mtime 1720128551.081102
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\migrations\operations\special.py first seen with mtime 1720128551.1295283
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\mail\utils.py first seen with mtime 1720128551.01755
+File C:\Program Files\Python312\Lib\reprlib.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\zoneinfo\_tzpath.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\pickle.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\utils\deconstruct.py first seen with mtime 1720128551.326659
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\sqlparse\filters\output.py first seen with mtime 1720128547.292061
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\auth\base_user.py first seen with mtime 1720128548.729819
+File C:\Program Files\Python312\Lib\email\iterators.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\http\multipartparser.py first seen with mtime 1720128551.263729
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\views\generic\detail.py first seen with mtime 1720128551.3672438
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\admin\views\autocomplete.py first seen with mtime 1720128548.3014235
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\utils\text.py first seen with mtime 1720128551.3439462
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\utils\formats.py first seen with mtime 1720128551.3316453
+File C:\Program Files\Python312\Lib\asyncio\locks.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\MySQLdb\_exceptions.py first seen with mtime 1720129330.6392753
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\shortcuts.py first seen with mtime 1720128547.4984238
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\contenttypes\forms.py first seen with mtime 1720128548.9762442
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\template\library.py first seen with mtime 1720128551.284031
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\checks\urls.py first seen with mtime 1720128550.9930391
+File C:\Program Files\Python312\Lib\weakref.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\admin\options.py first seen with mtime 1720128547.8025117
+File C:\Program Files\Python312\Lib\enum.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\DLLs\_socket.pyd first seen with mtime 1696246028.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\models\sql\query.py first seen with mtime 1720128551.1750162
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\forms\formsets.py first seen with mtime 1720128551.1839926
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\utils\functional.py first seen with mtime 1720128551.3326428
+File C:\Program Files\Python312\Lib\asyncio\mixins.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\json\scanner.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\forms\__init__.py first seen with mtime 1720128551.1809993
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\files\storage\base.py first seen with mtime 1720128551.0074112
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\utils\ipv6.py first seen with mtime 1720128551.3357964
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\forms\utils.py first seen with mtime 1720128551.1869848
+File C:\Program Files\Python312\Lib\mimetypes.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\sqlparse\filters\right_margin.py first seen with mtime 1720128547.293059
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\forms\forms.py first seen with mtime 1720128551.1839926
+File C:\Program Files\Python312\Lib\email\feedparser.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\MySQLdb\times.py first seen with mtime 1720129330.654859
+File C:\Program Files\Python312\Lib\string.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\__init__.py first seen with mtime 1720128547.4974632
+File C:\Program Files\Python312\Lib\asyncio\timeouts.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\migrations\operations\base.py first seen with mtime 1720128551.1275332
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\models\fields\files.py first seen with mtime 1720128551.1528242
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\auth\__init__.py first seen with mtime 1720128548.7258658
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\sites\__init__.py first seen with mtime 1720128550.7314851
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\checks\__init__.py first seen with mtime 1720128550.9850602
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\middleware\cache.py first seen with mtime 1720128551.2677186
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\backends\mysql\operations.py first seen with mtime 1720128551.083098
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\auth\backends.py first seen with mtime 1720128548.728821
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\templatetags\__init__.py first seen with mtime 1720128551.2993107
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\contenttypes\models.py first seen with mtime 1720128548.9772422
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\auth\signals.py first seen with mtime 1720128548.7409253
+File C:\Program Files\Python312\Lib\asyncio\sslproto.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\signal.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\utils\encoding.py first seen with mtime 1720128551.3306487
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\middleware\csrf.py first seen with mtime 1720128551.270712
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\migrations\utils.py first seen with mtime 1720128551.1245408
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\admin\templatetags\__init__.py first seen with mtime 1720128548.2974348
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\models\sql\datastructures.py first seen with mtime 1720128551.1730225
+File C:\Program Files\Python312\Lib\importlib\_abc.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\urllib\error.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\uuid.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\files\utils.py first seen with mtime 1720128551.0054157
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\models\fields\generated.py first seen with mtime 1720128551.1539335
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\template\defaulttags.py first seen with mtime 1720128551.2818313
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\views\generic\edit.py first seen with mtime 1720128551.3682418
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\staticfiles\views.py first seen with mtime 1720128550.959713
+File C:\Program Files\Python312\Lib\encodings\__init__.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\ctypes\wintypes.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\pkgutil.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\utils\autoreload.py first seen with mtime 1720128551.3205
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\models\fields\json.py first seen with mtime 1720128551.1549294
+File C:\Program Files\Python312\Lib\random.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\operator.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\MySQLdb\converters.py first seen with mtime 1720129330.6392753
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\models\fields\proxy.py first seen with mtime 1720128551.1579225
+File C:\Program Files\Python312\DLLs\_hashlib.pyd first seen with mtime 1696246028.0
+File C:\Program Files\Python312\DLLs\_decimal.pyd first seen with mtime 1696246028.0
+File C:\Program Files\Python312\Lib\lzma.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\_markupbase.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\copyreg.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\templatetags\tz.py first seen with mtime 1720128551.3033004
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\asgiref\local.py first seen with mtime 1720128547.390769
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\models\functions\datetime.py first seen with mtime 1720128551.1640446
+File C:\Program Files\Python312\Lib\wsgiref\__init__.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\views\static.py first seen with mtime 1720128551.3570766
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\admin\filters.py first seen with mtime 1720128547.7995124
+File C:\Program Files\Python312\Lib\heapq.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\asyncio\staggered.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\types.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\utils\crypto.py first seen with mtime 1720128551.3234904
+File C:\Program Files\Python312\Lib\_compression.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\http\cookie.py first seen with mtime 1720128551.262733
+File C:\Users\PC\projects\voting sys\voting\core\admin.py first seen with mtime 1720177407.9574342
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\sqlparse\utils.py first seen with mtime 1720128547.2851179
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\models\expressions.py first seen with mtime 1720128551.140637
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\utils\safestring.py first seen with mtime 1720128551.3417797
+File C:\Program Files\Python312\Lib\asyncio\log.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\nturl2path.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\messages\constants.py first seen with mtime 1720128549.938995
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\utils\dateformat.py first seen with mtime 1720128551.3246646
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\messages\storage\base.py first seen with mtime 1720128549.9441447
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\sqlparse\filters\reindent.py first seen with mtime 1720128547.292061
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\models\signals.py first seen with mtime 1720128551.1498322
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\template\utils.py first seen with mtime 1720128551.2880218
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\apps\__init__.py first seen with mtime 1720128547.499456
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\sqlparse\filters\__init__.py first seen with mtime 1720128547.2900672
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\cache\backends\filebased.py first seen with mtime 1720128550.9818747
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\sites\requests.py first seen with mtime 1720128550.7366316
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\backends\base\operations.py first seen with mtime 1720128551.0721276
+File C:\Program Files\Python312\DLLs\_overlapped.pyd first seen with mtime 1696246030.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\utils\module_loading.py first seen with mtime 1720128551.339785
+File C:\Program Files\Python312\Lib\asyncio\base_events.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\admin\sites.py first seen with mtime 1720128547.803501
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\contenttypes\__init__.py first seen with mtime 1720128548.9730732
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\sqlparse\filters\others.py first seen with mtime 1720128547.291065
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\views\debug.py first seen with mtime 1720128551.3550818
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\checks\caches.py first seen with mtime 1720128550.9860578
+File C:\Program Files\Python312\Lib\wsgiref\headers.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\copy.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\http\request.py first seen with mtime 1720128551.2647266
+File C:\Program Files\Python312\Lib\contextlib.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\locale.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\forms\boundfield.py first seen with mtime 1720128551.1819973
+File C:\Users\PC\projects\voting sys\voting\voting\__init__.py first seen with mtime 1720128712.1527097
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\MySQLdb\constants\FIELD_TYPE.py first seen with mtime 1720129330.654859
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\views\decorators\common.py first seen with mtime 1720128551.3600695
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\files\__init__.py first seen with mtime 1720128550.9992535
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\contenttypes\admin.py first seen with mtime 1720128548.9742506
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\auth\decorators.py first seen with mtime 1720128548.7339435
+File C:\Program Files\Python312\Lib\glob.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\management\__init__.py first seen with mtime 1720128551.0255308
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\views\decorators\debug.py first seen with mtime 1720128551.3620636
+File C:\Program Files\Python312\Lib\ssl.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\sessions\models.py first seen with mtime 1720128550.5236459
+File C:\Program Files\Python312\Lib\asyncio\tasks.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\admin\views\main.py first seen with mtime 1720128548.3024209
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\models\fields\related_lookups.py first seen with mtime 1720128551.1599157
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\models\manager.py first seen with mtime 1720128551.1448464
+File C:\Users\PC\projects\voting sys\voting\core\models.py first seen with mtime 1720257999.397477
+File C:\Program Files\Python312\Lib\html\__init__.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\checks\security\sessions.py first seen with mtime 1720128550.9982562
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\admin\exceptions.py first seen with mtime 1720128547.7995124
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\auth\admin.py first seen with mtime 1720128548.7278225
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\management\color.py first seen with mtime 1720128551.027526
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\utils\connection.py first seen with mtime 1720128551.3224928
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\migrations\state.py first seen with mtime 1720128551.1245408
+File C:\Program Files\Python312\Lib\_compat_pickle.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\models\fields\reverse_related.py first seen with mtime 1720128551.1609123
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\models\base.py first seen with mtime 1720128551.1335185
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\utils\version.py first seen with mtime 1720128551.3469381
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\utils\datastructures.py first seen with mtime 1720128551.3246646
+File C:\Program Files\Python312\Lib\asyncio\trsock.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\admin\templatetags\admin_modify.py first seen with mtime 1720128548.2984302
+File C:\Program Files\Python312\Lib\wsgiref\util.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\staticfiles\utils.py first seen with mtime 1720128550.959713
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\sqlparse\tokens.py first seen with mtime 1720128547.2840822
+File C:\Program Files\Python312\Lib\email\mime\__init__.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\templatetags\i18n.py first seen with mtime 1720128551.3013065
+File C:\Program Files\Python312\Lib\socket.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\models\sql\__init__.py first seen with mtime 1720128551.1680348
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\__init__.py first seen with mtime 1720128551.0619478
+File C:\Program Files\Python312\Lib\json\encoder.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\logging\handlers.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\http\__init__.py first seen with mtime 1720128551.262733
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\backends\utils.py first seen with mtime 1720128551.0661416
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\files\move.py first seen with mtime 1720128551.002248
+File C:\Program Files\Python312\Lib\bisect.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\email\mime\nonmultipart.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\models\sql\subqueries.py first seen with mtime 1720128551.1760135
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\MySQLdb\release.py first seen with mtime 1720129330.6392753
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\urls\utils.py first seen with mtime 1720128551.3165085
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\auth\validators.py first seen with mtime 1720128548.7450304
+File C:\Program Files\Python312\Lib\email\mime\multipart.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\hmac.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\ipaddress.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\http\__init__.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\urllib\request.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\voting\core\__init__.py first seen with mtime 1720128773.7032878
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\backends\base\base.py first seen with mtime 1720128551.0681372
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\template\loaders\filesystem.py first seen with mtime 1720128551.2983139
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\apps\config.py first seen with mtime 1720128547.5004182
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\auth\management\__init__.py first seen with mtime 1720128548.9599233
+File C:\Program Files\Python312\Lib\asyncio\taskgroups.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\html\parser.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\email\base64mime.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\utils\dateparse.py first seen with mtime 1720128551.3256614
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\views\csrf.py first seen with mtime 1720128551.3540847
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\admin\templatetags\admin_list.py first seen with mtime 1720128548.2974348
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\template\backends\__init__.py first seen with mtime 1720128551.289018
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\mail\__init__.py first seen with mtime 1720128551.016552
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\utils\decorators.py first seen with mtime 1720128551.3276565
+File C:\Program Files\Python312\Lib\pathlib.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\html\entities.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\email\contentmanager.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\urls\__init__.py first seen with mtime 1720128551.3124104
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\urls\base.py first seen with mtime 1720128551.3134077
+File C:\Program Files\Python312\Lib\sysconfig.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\wsgiref\handlers.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\gettext.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\sqlparse\__init__.py first seen with mtime 1720128547.2789583
+File C:\Program Files\Python312\Lib\asyncio\events.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\template\engine.py first seen with mtime 1720128551.2818313
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\sqlparse\engine\statement_splitter.py first seen with mtime 1720128547.2880719
+File C:\Program Files\Python312\Lib\pprint.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\utils\choices.py first seen with mtime 1720128551.3214982
+File C:\Program Files\Python312\Lib\email\mime\message.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\asyncio\exceptions.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\backends\base\creation.py first seen with mtime 1720128551.0691345
+File C:\Program Files\Python312\DLLs\_asyncio.pyd first seen with mtime 1696246028.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\migrations\operations\fields.py first seen with mtime 1720128551.1275332
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\MySQLdb\constants\__init__.py first seen with mtime 1720129330.654859
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\validators.py first seen with mtime 1720128550.9738953
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\asgiref\current_thread_executor.py first seen with mtime 1720128547.390769
+File C:\Program Files\Python312\Lib\asyncio\runners.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\urllib\parse.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\admin\templatetags\base.py first seen with mtime 1720128548.2994285
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\checks\compatibility\django_4_0.py first seen with mtime 1720128550.995267
+File C:\Program Files\Python312\Lib\warnings.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\email\policy.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\urls\resolvers.py first seen with mtime 1720128551.3165085
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\backends\mysql\validation.py first seen with mtime 1720128551.084096
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\management\base.py first seen with mtime 1720128551.026525
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\backends\base\__init__.py first seen with mtime 1720128551.067139
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\views\generic\list.py first seen with mtime 1720128551.3692396
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\cache\__init__.py first seen with mtime 1720128550.9758916
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\migrations\operations\__init__.py first seen with mtime 1720128551.126536
+File C:\Program Files\Python312\Lib\threading.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\DLLs\_ctypes.pyd first seen with mtime 1696246028.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\template\__init__.py first seen with mtime 1720128551.2748506
+File C:\Program Files\Python312\Lib\email\message.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\signals.py first seen with mtime 1720128550.9709024
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\conf\global_settings.py first seen with mtime 1720128547.5024502
+File C:\Program Files\Python312\Lib\token.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\sqlparse\keywords.py first seen with mtime 1720128547.2819517
+File C:\Program Files\Python312\DLLs\_ssl.pyd first seen with mtime 1696246030.0
+File C:\Program Files\Python312\Lib\email\__init__.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\files\temp.py first seen with mtime 1720128551.002248
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\utils\lorem_ipsum.py first seen with mtime 1720128551.339785
+File C:\Program Files\Python312\Lib\asyncio\proactor_events.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\utils\itercompat.py first seen with mtime 1720128551.3367922
+File C:\Program Files\Python312\Lib\urllib\response.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\admin\models.py first seen with mtime 1720128547.8015065
+File C:\Program Files\Python312\DLLs\_bz2.pyd first seen with mtime 1696246030.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\messages\storage\__init__.py first seen with mtime 1720128549.9429834
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\models\constants.py first seen with mtime 1720128551.1346533
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\checks\registry.py first seen with mtime 1720128550.9910457
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\migrations\operations\models.py first seen with mtime 1720128551.12853
+File C:\Program Files\Python312\Lib\datetime.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\email\_parseaddr.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\admin\__init__.py first seen with mtime 1720128547.7955222
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\contenttypes\apps.py first seen with mtime 1720128548.9742506
+File C:\Program Files\Python312\Lib\typing.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\urls\conf.py first seen with mtime 1720128551.3134077
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\auth\hashers.py first seen with mtime 1720128548.7369375
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\messages\api.py first seen with mtime 1720128549.9380188
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\files\storage\memory.py first seen with mtime 1720128551.0094059
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\mail\message.py first seen with mtime 1720128551.01755
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\backends\mysql\compiler.py first seen with mtime 1720128551.0801046
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\models\fields\related.py first seen with mtime 1720128551.1589203
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\utils\http.py first seen with mtime 1720128551.3347988
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\handlers\base.py first seen with mtime 1720128551.0133972
+File C:\Program Files\Python312\Lib\dis.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\models\__init__.py first seen with mtime 1720128551.1305273
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\checks\compatibility\__init__.py first seen with mtime 1720128550.994269
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\templatetags\cache.py first seen with mtime 1720128551.3003085
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\models\functions\window.py first seen with mtime 1720128551.1670382
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\migrations\__init__.py first seen with mtime 1720128551.1133692
+File C:\Users\PC\projects\voting sys\voting\core\tokens.py first seen with mtime 1720137141.6053057
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\messages\utils.py first seen with mtime 1720128549.9419863
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\template\exceptions.py first seen with mtime 1720128551.2828286
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\utils\hashable.py first seen with mtime 1720128551.3336399
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\backends\mysql\client.py first seen with mtime 1720128551.079109
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\template\backends\base.py first seen with mtime 1720128551.290015
+File C:\Program Files\Python312\Lib\tempfile.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\sessions\apps.py first seen with mtime 1720128550.5186546
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\asgiref\sync.py first seen with mtime 1720128547.3938599
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\MySQLdb\_mysql.cp312-win_amd64.pyd first seen with mtime 1720129330.6392753
+File C:\Program Files\Python312\Lib\encodings\aliases.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\utils\dates.py first seen with mtime 1720128551.326659
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\auth\models.py first seen with mtime 1720128548.7399292
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\files\storage\__init__.py first seen with mtime 1720128551.006418
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\backends\mysql\introspection.py first seen with mtime 1720128551.0820992
+File C:\Program Files\Python312\DLLs\_uuid.pyd first seen with mtime 1696246028.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\admin\views\__init__.py first seen with mtime 1720128548.3004253
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\template\context.py first seen with mtime 1720128551.2778428
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\http\response.py first seen with mtime 1720128551.2657244
+File C:\Program Files\Python312\Lib\traceback.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\template\backends\django.py first seen with mtime 1720128551.2910118
+File C:\Program Files\Python312\Lib\__future__.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\admin\widgets.py first seen with mtime 1720128547.8055885
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\models\indexes.py first seen with mtime 1720128551.141634
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\template\loader_tags.py first seen with mtime 1720128551.2850287
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\backends\__init__.py first seen with mtime 1720128551.0641475
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\servers\__init__.py first seen with mtime 1720128551.059954
+File C:\Program Files\Python312\Lib\asyncio\format_helpers.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\urls\exceptions.py first seen with mtime 1720128551.3155107
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\models\options.py first seen with mtime 1720128551.1468444
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\__init__.py first seen with mtime 1720128550.9679105
+File C:\Program Files\Python312\Lib\wsgiref\simple_server.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\sqlparse\exceptions.py first seen with mtime 1720128547.2809541
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\forms\widgets.py first seen with mtime 1720128551.1879816
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\utils\html.py first seen with mtime 1720128551.3346405
+File C:\Program Files\Python312\Lib\selectors.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\sqlparse\filters\tokens.py first seen with mtime 1720128547.2942283
+File C:\Program Files\Python312\Lib\inspect.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\utils\log.py first seen with mtime 1720128551.338787
+File C:\Program Files\Python312\Lib\logging\config.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\encodings\cp1252.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\numbers.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\utils\deprecation.py first seen with mtime 1720128551.328654
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\conf\__init__.py first seen with mtime 1720128547.5014598
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\admin\apps.py first seen with mtime 1720128547.7965188
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\management\commands\runserver.py first seen with mtime 1720128551.042643
+File C:\Program Files\Python312\Lib\ctypes\__init__.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\textwrap.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\concurrent\futures\thread.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\admin\decorators.py first seen with mtime 1720128547.7985146
+File C:\Program Files\Python312\Lib\http\client.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\MySQLdb\constants\FLAG.py first seen with mtime 1720129330.654859
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\handlers\asgi.py first seen with mtime 1720128551.0123973
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\utils\translation\trans_real.py first seen with mtime 1720128551.3519251
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\models\query_utils.py first seen with mtime 1720128551.1498322
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\views\generic\dates.py first seen with mtime 1720128551.3672438
+File C:\Users\PC\projects\voting sys\voting\voting\urls.py first seen with mtime 1720260848.5302722
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\middleware\__init__.py first seen with mtime 1720128551.2667258
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\conf\locale\__init__.py first seen with mtime 1720128547.507654
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\sessions\middleware.py first seen with mtime 1720128550.5226595
+File C:\Program Files\Python312\Lib\asyncio\base_tasks.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\utils\asyncio.py first seen with mtime 1720128551.319501
+File C:\Program Files\Python312\Lib\email\_encoded_words.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\decimal.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\handlers\exception.py first seen with mtime 1720128551.0145571
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\files\images.py first seen with mtime 1720128551.0002508
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\template\loader.py first seen with mtime 1720128551.284031
+File C:\Program Files\Python312\Lib\dataclasses.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\utils\cache.py first seen with mtime 1720128551.3214982
+File C:\Program Files\Python312\Lib\email\_header_value_parser.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\auth\apps.py first seen with mtime 1720128548.728821
+File C:\Users\PC\projects\voting sys\voting\core\apps.py first seen with mtime 1720128773.6989512
+File C:\Users\PC\projects\voting sys\voting\core\forms.py first seen with mtime 1720205313.6066275
+File C:\Program Files\Python312\Lib\asyncio\streams.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\backends\base\schema.py first seen with mtime 1720128551.073123
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\models\functions\__init__.py first seen with mtime 1720128551.1619115
+File C:\Program Files\Python312\Lib\difflib.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\dispatch\__init__.py first seen with mtime 1720128551.178008
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\six.py first seen with mtime 1720131201.049387
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\models\aggregates.py first seen with mtime 1720128551.131523
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\models\fields\related_descriptors.py first seen with mtime 1720128551.1599157
+File C:\Program Files\Python312\Lib\subprocess.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\json\decoder.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\utils\tree.py first seen with mtime 1720128551.3459415
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\sqlparse\engine\__init__.py first seen with mtime 1720128547.2860768
+File C:\Program Files\Python312\Lib\base64.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\argparse.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\models\query.py first seen with mtime 1720128551.148835
+File C:\Program Files\Python312\Lib\gzip.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\serializers\json.py first seen with mtime 1720128551.054967
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\backends\mysql\creation.py first seen with mtime 1720128551.0801046
+File C:\Program Files\Python312\Lib\asyncio\__init__.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\concurrent\futures\__init__.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\template\defaultfilters.py first seen with mtime 1720128551.279837
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\wsgi.py first seen with mtime 1720128550.974895
+File C:\Program Files\Python312\Lib\asyncio\selector_events.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\staticfiles\handlers.py first seen with mtime 1720128550.9557223
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\template\loaders\cached.py first seen with mtime 1720128551.297317
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\contenttypes\checks.py first seen with mtime 1720128548.975247
+File C:\Program Files\Python312\Lib\bz2.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\http\cookies.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\template\loaders\__init__.py first seen with mtime 1720128551.295321
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\backends\signals.py first seen with mtime 1720128551.0661416
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\__init__.py first seen with mtime 1720128547.7955222
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\auth\middleware.py first seen with mtime 1720128548.7379344
+File C:\Program Files\Python312\Lib\re\__init__.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\utils\__init__.py first seen with mtime 1720128551.3175056
+File C:\Program Files\Python312\Lib\asyncio\windows_utils.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\email\parser.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\secrets.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\migrations\exceptions.py first seen with mtime 1720128551.1155665
+File C:\Program Files\Python312\Lib\asyncio\base_subprocess.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\forms\renderers.py first seen with mtime 1720128551.1859865
+File C:\Program Files\Python312\Lib\zoneinfo\_common.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\voting\core\views.py first seen with mtime 1720264205.4373298
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\files\storage\mixins.py first seen with mtime 1720128551.010403
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\checks\security\__init__.py first seen with mtime 1720128550.9962664
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\staticfiles\management\commands\runserver.py first seen with mtime 1720128550.9649203
+File C:\Program Files\Python312\DLLs\_queue.pyd first seen with mtime 1696246028.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\admin\templatetags\log.py first seen with mtime 1720128548.3004253
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\urls\converters.py first seen with mtime 1720128551.314515
+File C:\Program Files\Python312\Lib\graphlib.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\checks\async_checks.py first seen with mtime 1720128550.9860578
+File C:\Program Files\Python312\Lib\calendar.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\tokenize.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\utils\timezone.py first seen with mtime 1720128551.3449438
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\admin\actions.py first seen with mtime 1720128547.7965188
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\models\sql\compiler.py first seen with mtime 1720128551.1700304
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\exceptions.py first seen with mtime 1720128550.9689076
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\servers\basehttp.py first seen with mtime 1720128551.06095
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\backends\mysql\base.py first seen with mtime 1720128551.0781097
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\template\loaders\app_directories.py first seen with mtime 1720128551.295321
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\checks\security\csrf.py first seen with mtime 1720128550.9982562
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\serializers\base.py first seen with mtime 1720128551.054967
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\checks\templates.py first seen with mtime 1720128550.9920416
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\sqlparse\formatter.py first seen with mtime 1720128547.2819517
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\MySQLdb\constants\CLIENT.py first seen with mtime 1720129330.654859
+File C:\Program Files\Python312\Lib\asyncio\base_futures.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\email\generator.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\DLLs\_zoneinfo.pyd first seen with mtime 1696246030.0
+File C:\Program Files\Python312\Lib\asyncio\queues.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\files\storage\filesystem.py first seen with mtime 1720128551.0074112
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\core\management\commands\__init__.py first seen with mtime 1720128551.0305142
+File C:\Users\PC\projects\voting sys\voting\core\urls.py first seen with mtime 1720261234.3042102
+File C:\Program Files\Python312\Lib\opcode.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\models\sql\where.py first seen with mtime 1720128551.1770098
+File C:\Program Files\Python312\Lib\http\server.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\re\_casefix.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\asyncio\protocols.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\utils\translation\reloader.py first seen with mtime 1720128551.3499303
+File C:\Program Files\Python312\Lib\email\headerregistry.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\MySQLdb\__init__.py first seen with mtime 1720129330.6392753
+File C:\Program Files\Python312\Lib\importlib\__init__.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\models\fields\mixins.py first seen with mtime 1720128551.156931
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\middleware\security.py first seen with mtime 1720128551.273854
+File C:\Program Files\Python312\Lib\shutil.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\models\constraints.py first seen with mtime 1720128551.1346533
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\auth\checks.py first seen with mtime 1720128548.730815
+File C:\Program Files\Python312\Lib\email\header.py first seen with mtime 1696245958.0
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\utils\numberformat.py first seen with mtime 1720128551.3407822
+File C:\Users\PC\projects\voting sys\voting\templates\acceptDemand.html first seen with mtime 1720213967.331405
+File C:\Users\PC\projects\voting sys\voting\templates\addElection.html first seen with mtime 1720177188.772794
+File C:\Users\PC\projects\voting sys\voting\templates\authentication first seen with mtime 1720132012.682646
+File C:\Users\PC\projects\voting sys\voting\templates\base.html first seen with mtime 1720259158.0782757
+File C:\Users\PC\projects\voting sys\voting\templates\demandCandidature.html first seen with mtime 1720205462.4919584
+File C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html first seen with mtime 1720213754.7451203
+File C:\Users\PC\projects\voting sys\voting\templates\index.html first seen with mtime 1720176130.9689674
+File C:\Users\PC\projects\voting sys\voting\templates\listDemandCandidature.html first seen with mtime 1720254087.4242764
+File C:\Users\PC\projects\voting sys\voting\templates\listElections.html first seen with mtime 1720254919.7544036
+File C:\Users\PC\projects\voting sys\voting\templates\listElectionsAdmin.html first seen with mtime 1720194913.1285424
+File C:\Users\PC\projects\voting sys\voting\templates\listUsers.html first seen with mtime 1720197279.5669632
+File C:\Users\PC\projects\voting sys\voting\templates\resultsElection.html first seen with mtime 1720204700.0459864
+File C:\Users\PC\projects\voting sys\voting\templates\voteElection.html first seen with mtime 1720255565.841902
+File C:\Users\PC\projects\voting sys\voting\templates\authentication\emailConfirmation.html first seen with mtime 1720132112.3173804
+File C:\Users\PC\projects\voting sys\voting\templates\authentication\signin.html first seen with mtime 1720169684.598145
+File C:\Users\PC\projects\voting sys\voting\templates\authentication\signup.html first seen with mtime 1720169675.9962628
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\middleware\clickjacking.py first seen with mtime 1720128551.2687168
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\sessions\migrations\0001_initial.py first seen with mtime 1720128550.7255015
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\auth\migrations\0002_alter_permission_name_max_length.py first seen with mtime 1720128548.96398
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\auth\migrations\0011_update_proxy_permissions.py first seen with mtime 1720128548.9690835
+File C:\Users\PC\projects\voting sys\voting\core\migrations\__init__.py first seen with mtime 1720211368.7142012
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\admin\migrations\0002_logentry_remove_auto_add.py first seen with mtime 1720128548.125865
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\contenttypes\migrations\__init__.py first seen with mtime 1720128549.120434
+File C:\Users\PC\projects\voting sys\voting\core\migrations\0001_initial.py first seen with mtime 1720260831.768328
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\auth\migrations\0001_initial.py first seen with mtime 1720128548.9629152
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\sessions\backends\base.py first seen with mtime 1720128550.5256362
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\conf\urls\__init__.py first seen with mtime 1720128547.793282
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\messages\middleware.py first seen with mtime 1720128549.9409897
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\auth\migrations\0007_alter_validators_add_error_messages.py first seen with mtime 1720128548.967089
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\contenttypes\migrations\0001_initial.py first seen with mtime 1720128549.1194384
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\admin\migrations\0001_initial.py first seen with mtime 1720128548.1248665
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\migrations\recorder.py first seen with mtime 1720128551.1225479
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\auth\migrations\0008_alter_user_username_max_length.py first seen with mtime 1720128548.967089
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\auth\migrations\0009_alter_user_last_name_max_length.py first seen with mtime 1720128548.9680865
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\migrations\executor.py first seen with mtime 1720128551.11756
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\auth\migrations\0012_alter_user_first_name_max_length.py first seen with mtime 1720128548.970081
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\views\defaults.py first seen with mtime 1720128551.3560793
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\auth\migrations\0003_alter_user_email_max_length.py first seen with mtime 1720128548.9640975
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\contenttypes\migrations\0002_remove_content_type_name.py first seen with mtime 1720128549.1194384
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\auth\migrations\0005_alter_user_last_login_null.py first seen with mtime 1720128548.9650948
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\admin\migrations\__init__.py first seen with mtime 1720128548.1268609
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\auth\migrations\0004_alter_user_username_opts.py first seen with mtime 1720128548.9650948
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\middleware\common.py first seen with mtime 1720128551.269715
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\sessions\backends\__init__.py first seen with mtime 1720128550.524642
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\sessions\exceptions.py first seen with mtime 1720128550.5206487
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\sessions\migrations\__init__.py first seen with mtime 1720128550.7255015
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\migrations\graph.py first seen with mtime 1720128551.1185584
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\auth\migrations\__init__.py first seen with mtime 1720128548.970081
+File C:\Users\PC\projects\voting sys\voting\voting\wsgi.py first seen with mtime 1720128712.1517124
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\db\migrations\loader.py first seen with mtime 1720128551.1185584
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\auth\migrations\0006_require_contenttypes_0002.py first seen with mtime 1720128548.9660916
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\admin\migrations\0003_logentry_add_action_flag_choices.py first seen with mtime 1720128548.1268609
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\sessions\backends\db.py first seen with mtime 1720128550.5289578
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\auth\migrations\0010_alter_group_name_max_length.py first seen with mtime 1720128548.9680865
+File C:\Program Files\Python312\Lib\stringprep.py first seen with mtime 1696245958.0
+File C:\Program Files\Python312\Lib\encodings\idna.py first seen with mtime 1696245958.0
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.016) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`username` = 'ad' LIMIT 21; args=('ad',); alias=default
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\sessions\serializers.py first seen with mtime 1720128550.524642
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\messages\storage\session.py first seen with mtime 1720128549.9461384
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\messages\storage\fallback.py first seen with mtime 1720128549.9451432
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\messages\storage\cookie.py first seen with mtime 1720128549.9451432
+(0.000) SELECT 1 AS `a` FROM `auth_user` WHERE `auth_user`.`username` = 'ad' LIMIT 1; args=(1, 'ad'); alias=default
+"POST / HTTP/1.1" 200 3799
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\auth\context_processors.py first seen with mtime 1720128548.7328117
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\template\context_processors.py first seen with mtime 1720128551.2788396
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\messages\context_processors.py first seen with mtime 1720128549.9400227
+File C:\Users\PC\projects\voting sys\voting\core\context_processors.py first seen with mtime 1720191183.63019
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`username` = 'pc' LIMIT 21; args=('pc',); alias=default
+(0.000) SELECT 1 AS `a` FROM `django_session` WHERE `django_session`.`session_key` = 'pa39igk4yosm9a43vepab7hl7msthl8n' LIMIT 1; args=(1, 'pa39igk4yosm9a43vepab7hl7msthl8n'); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.000) INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES ('pa39igk4yosm9a43vepab7hl7msthl8n', 'e30:1sQ5Ay:yfoLXbgp-d7TnhEgNdNtKibaFcRpKHW8l6aKV2-0S14', '2024-07-20 13:10:04.359440'); args=('pa39igk4yosm9a43vepab7hl7msthl8n', 'e30:1sQ5Ay:yfoLXbgp-d7TnhEgNdNtKibaFcRpKHW8l6aKV2-0S14', '2024-07-20 13:10:04.359440'); alias=default
+(0.031) COMMIT; args=None; alias=default
+(0.016) UPDATE `auth_user` SET `last_login` = '2024-07-06 13:10:04.408057' WHERE `auth_user`.`id` = 1; args=('2024-07-06 13:10:04.408057', 1); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.000) UPDATE `django_session` SET `session_data` = '.eJxVjEEOwiAQRe_C2hAoDBSX7j0DGZhBqoYmpV0Z765NutDtf-_9l4i4rTVunZc4kTgLLU6_W8L84LYDumO7zTLPbV2mJHdFHrTL60z8vBzu30HFXr81IJHhMHrDo1JgvdNojIdkdA4EniDlYKCgUuSSQsugh-KKHTQjWiveH9IrN5M:1sQ5Ay:ipmp9mFfJx4KoT6yTalS1J8s-sgwDziCGEfbODOXX1E', `expire_date` = '2024-07-20 13:10:04.424056' WHERE `django_session`.`session_key` = 'pa39igk4yosm9a43vepab7hl7msthl8n'; args=('.eJxVjEEOwiAQRe_C2hAoDBSX7j0DGZhBqoYmpV0Z765NutDtf-_9l4i4rTVunZc4kTgLLU6_W8L84LYDumO7zTLPbV2mJHdFHrTL60z8vBzu30HFXr81IJHhMHrDo1JgvdNojIdkdA4EniDlYKCgUuSSQsugh-KKHTQjWiveH9IrN5M:1sQ5Ay:ipmp9mFfJx4KoT6yTalS1J8s-sgwDziCGEfbODOXX1E', '2024-07-20 13:10:04.424056', 'pa39igk4yosm9a43vepab7hl7msthl8n'); alias=default
+(0.016) COMMIT; args=None; alias=default
+"POST / HTTP/1.1" 302 0
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2024-07-06 13:10:04.448732' AND `django_session`.`session_key` = 'pa39igk4yosm9a43vepab7hl7msthl8n') LIMIT 21; args=('2024-07-06 13:10:04.448732', 'pa39igk4yosm9a43vepab7hl7msthl8n'); alias=default
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT `core_election`.`id_election`, `core_election`.`subject`, `core_election`.`start_date`, `core_election`.`end_date` FROM `core_election`; args=(); alias=default
+(0.000) SELECT COUNT(*) AS `__count` FROM `core_demandcandidature` WHERE `core_demandcandidature`.`election_id` = 1; args=(1,); alias=default
+(0.000) SELECT COUNT(*) AS `__count` FROM `core_demandcandidature` WHERE `core_demandcandidature`.`election_id` = 2; args=(2,); alias=default
+(0.000) SELECT COUNT(*) AS `__count` FROM `core_demandcandidature` WHERE `core_demandcandidature`.`election_id` = 3; args=(3,); alias=default
+(0.000) SELECT 1 AS `a` FROM `auth_group` INNER JOIN `auth_user_groups` ON (`auth_group`.`id` = `auth_user_groups`.`group_id`) WHERE (`auth_user_groups`.`user_id` = 1 AND `auth_group`.`name` = 'Candidates') LIMIT 1; args=(1, 1, 'Candidates'); alias=default
+"GET /listElectionsAdmin/ HTTP/1.1" 200 4238
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\contrib\staticfiles\storage.py first seen with mtime 1720128550.9567213
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\conf\locale\en\__init__.py first seen with mtime 1720128547.5583222
+File C:\Users\PC\projects\voting sys\env\Lib\site-packages\django\conf\locale\en\formats.py first seen with mtime 1720128547.5593512
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2024-07-06 13:10:17.242443' AND `django_session`.`session_key` = 'pa39igk4yosm9a43vepab7hl7msthl8n') LIMIT 21; args=('2024-07-06 13:10:17.242443', 'pa39igk4yosm9a43vepab7hl7msthl8n'); alias=default
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT `core_election`.`id_election`, `core_election`.`subject`, `core_election`.`start_date`, `core_election`.`end_date` FROM `core_election` WHERE `core_election`.`id_election` = 1 LIMIT 21; args=(1,); alias=default
+(0.015) SELECT `core_demandcandidature`.`id_demand_candidature`, `core_demandcandidature`.`status`, `core_demandcandidature`.`election_id`, `core_demandcandidature`.`date`, `core_demandcandidature`.`user_id`, `core_demandcandidature`.`motivation` FROM `core_demandcandidature` WHERE `core_demandcandidature`.`election_id` = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT 1 AS `a` FROM `auth_group` INNER JOIN `auth_user_groups` ON (`auth_group`.`id` = `auth_user_groups`.`group_id`) WHERE (`auth_user_groups`.`user_id` = 1 AND `auth_group`.`name` = 'Candidates') LIMIT 1; args=(1, 1, 'Candidates'); alias=default
+(0.000) SELECT `core_demandcandidature`.`id_demand_candidature`, `core_demandcandidature`.`status`, `core_demandcandidature`.`election_id`, `core_demandcandidature`.`date`, `core_demandcandidature`.`user_id`, `core_demandcandidature`.`motivation` FROM `core_demandcandidature` WHERE `core_demandcandidature`.`election_id` = 1; args=(1,); alias=default
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 4 LIMIT 21; args=(4,); alias=default
+"GET /electionDemands/1 HTTP/1.1" 200 3460
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2024-07-06 13:10:21.874052' AND `django_session`.`session_key` = 'pa39igk4yosm9a43vepab7hl7msthl8n') LIMIT 21; args=('2024-07-06 13:10:21.874052', 'pa39igk4yosm9a43vepab7hl7msthl8n'); alias=default
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT `core_demandcandidature`.`id_demand_candidature`, `core_demandcandidature`.`status`, `core_demandcandidature`.`election_id`, `core_demandcandidature`.`date`, `core_demandcandidature`.`user_id`, `core_demandcandidature`.`motivation` FROM `core_demandcandidature` WHERE `core_demandcandidature`.`id_demand_candidature` = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT `core_election`.`id_election`, `core_election`.`subject`, `core_election`.`start_date`, `core_election`.`end_date` FROM `core_election` WHERE `core_election`.`id_election` = 1 LIMIT 21; args=(1,); alias=default
+(0.016) SELECT 1 AS `a` FROM `auth_group` INNER JOIN `auth_user_groups` ON (`auth_group`.`id` = `auth_user_groups`.`group_id`) WHERE (`auth_user_groups`.`user_id` = 1 AND `auth_group`.`name` = 'Candidates') LIMIT 1; args=(1, 1, 'Candidates'); alias=default
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 4 LIMIT 21; args=(4,); alias=default
+"GET /acceptDemand/1 HTTP/1.1" 200 3697
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2024-07-06 13:10:23.784067' AND `django_session`.`session_key` = 'pa39igk4yosm9a43vepab7hl7msthl8n') LIMIT 21; args=('2024-07-06 13:10:23.784067', 'pa39igk4yosm9a43vepab7hl7msthl8n'); alias=default
+(0.015) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT `core_demandcandidature`.`id_demand_candidature`, `core_demandcandidature`.`status`, `core_demandcandidature`.`election_id`, `core_demandcandidature`.`date`, `core_demandcandidature`.`user_id`, `core_demandcandidature`.`motivation` FROM `core_demandcandidature` WHERE `core_demandcandidature`.`id_demand_candidature` = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT `core_election`.`id_election`, `core_election`.`subject`, `core_election`.`start_date`, `core_election`.`end_date` FROM `core_election` WHERE `core_election`.`id_election` = 1 LIMIT 21; args=(1,); alias=default
+(0.000) UPDATE `core_demandcandidature` SET `status` = 1, `election_id` = 1, `date` = '2024-07-06', `user_id` = 4, `motivation` = 'NNNNNNNNNN' WHERE `core_demandcandidature`.`id_demand_candidature` = 1; args=(True, 1, '2024-07-06', 4, 'NNNNNNNNNN', 1); alias=default
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT `core_candidate`.`id_candidate`, `core_candidate`.`user_id`, `core_candidate`.`points`, `core_candidate`.`election_id` FROM `core_candidate` WHERE (`core_candidate`.`election_id` = 1 AND `core_candidate`.`user_id` = 4) LIMIT 21; args=(1, 4); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.000) INSERT INTO `core_candidate` (`user_id`, `points`, `election_id`) VALUES (4, 0, 1); args=[4, 0, 1]; alias=default
+(0.000) COMMIT; args=None; alias=default
+(0.000) SELECT `auth_group`.`id`, `auth_group`.`name` FROM `auth_group` WHERE `auth_group`.`name` = 'Candidates' LIMIT 21; args=('Candidates',); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.000) INSERT IGNORE INTO `auth_user_groups` (`user_id`, `group_id`) VALUES (4, 2); args=(4, 2); alias=default
+(0.016) COMMIT; args=None; alias=default
+"POST /acceptDemand/1 HTTP/1.1" 302 0
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2024-07-06 13:10:23.879566' AND `django_session`.`session_key` = 'pa39igk4yosm9a43vepab7hl7msthl8n') LIMIT 21; args=('2024-07-06 13:10:23.879566', 'pa39igk4yosm9a43vepab7hl7msthl8n'); alias=default
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT `core_election`.`id_election`, `core_election`.`subject`, `core_election`.`start_date`, `core_election`.`end_date` FROM `core_election` WHERE `core_election`.`id_election` = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT `core_demandcandidature`.`id_demand_candidature`, `core_demandcandidature`.`status`, `core_demandcandidature`.`election_id`, `core_demandcandidature`.`date`, `core_demandcandidature`.`user_id`, `core_demandcandidature`.`motivation` FROM `core_demandcandidature` WHERE `core_demandcandidature`.`election_id` = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT 1 AS `a` FROM `auth_group` INNER JOIN `auth_user_groups` ON (`auth_group`.`id` = `auth_user_groups`.`group_id`) WHERE (`auth_user_groups`.`user_id` = 1 AND `auth_group`.`name` = 'Candidates') LIMIT 1; args=(1, 1, 'Candidates'); alias=default
+(0.000) SELECT `core_demandcandidature`.`id_demand_candidature`, `core_demandcandidature`.`status`, `core_demandcandidature`.`election_id`, `core_demandcandidature`.`date`, `core_demandcandidature`.`user_id`, `core_demandcandidature`.`motivation` FROM `core_demandcandidature` WHERE `core_demandcandidature`.`election_id` = 1; args=(1,); alias=default
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 4 LIMIT 21; args=(4,); alias=default
+"GET /electionDemands/1 HTTP/1.1" 200 3729
+File C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html previous mtime: 1720213754.7451203, current mtime: 1720271675.743448
+C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html notified as changed. Signal results: [(<function template_changed at 0x0000020DF78AE840>, True), (<function translation_file_changed at 0x0000020DF8AB3CE0>, None)].
+File C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html previous mtime: 1720271675.743448, current mtime: 1720271676.918451
+C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html notified as changed. Signal results: [(<function template_changed at 0x0000020DF78AE840>, True), (<function translation_file_changed at 0x0000020DF8AB3CE0>, None)].
+File C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html previous mtime: 1720271676.918451, current mtime: 1720271687.4000483
+C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html notified as changed. Signal results: [(<function template_changed at 0x0000020DF78AE840>, True), (<function translation_file_changed at 0x0000020DF8AB3CE0>, None)].
+File C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html previous mtime: 1720271687.4000483, current mtime: 1720271691.055421
+C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html notified as changed. Signal results: [(<function template_changed at 0x0000020DF78AE840>, True), (<function translation_file_changed at 0x0000020DF8AB3CE0>, None)].
+File C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html previous mtime: 1720271691.055421, current mtime: 1720271696.665435
+C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html notified as changed. Signal results: [(<function template_changed at 0x0000020DF78AE840>, True), (<function translation_file_changed at 0x0000020DF8AB3CE0>, None)].
+File C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html previous mtime: 1720271696.665435, current mtime: 1720271733.916504
+C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html notified as changed. Signal results: [(<function template_changed at 0x0000020DF78AE840>, True), (<function translation_file_changed at 0x0000020DF8AB3CE0>, None)].
+File C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html previous mtime: 1720271733.916504, current mtime: 1720271735.5994923
+C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html notified as changed. Signal results: [(<function template_changed at 0x0000020DF78AE840>, True), (<function translation_file_changed at 0x0000020DF8AB3CE0>, None)].
+File C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html previous mtime: 1720271735.5994923, current mtime: 1720271746.1782963
+C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html notified as changed. Signal results: [(<function template_changed at 0x0000020DF78AE840>, True), (<function translation_file_changed at 0x0000020DF8AB3CE0>, None)].
+File C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html previous mtime: 1720271746.1782963, current mtime: 1720271749.6606748
+C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html notified as changed. Signal results: [(<function template_changed at 0x0000020DF78AE840>, True), (<function translation_file_changed at 0x0000020DF8AB3CE0>, None)].
+File C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html previous mtime: 1720271749.6606748, current mtime: 1720271757.944141
+C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html notified as changed. Signal results: [(<function template_changed at 0x0000020DF78AE840>, True), (<function translation_file_changed at 0x0000020DF8AB3CE0>, None)].
+File C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html previous mtime: 1720271757.944141, current mtime: 1720271759.6940074
+C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html notified as changed. Signal results: [(<function template_changed at 0x0000020DF78AE840>, True), (<function translation_file_changed at 0x0000020DF8AB3CE0>, None)].
+File C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html previous mtime: 1720271759.6940074, current mtime: 1720271760.9087315
+C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html notified as changed. Signal results: [(<function template_changed at 0x0000020DF78AE840>, True), (<function translation_file_changed at 0x0000020DF8AB3CE0>, None)].
+File C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html previous mtime: 1720271760.9087315, current mtime: 1720271766.5796666
+C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html notified as changed. Signal results: [(<function template_changed at 0x0000020DF78AE840>, True), (<function translation_file_changed at 0x0000020DF8AB3CE0>, None)].
+File C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html previous mtime: 1720271766.5796666, current mtime: 1720271770.0120957
+C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html notified as changed. Signal results: [(<function template_changed at 0x0000020DF78AE840>, True), (<function translation_file_changed at 0x0000020DF8AB3CE0>, None)].
+File C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html previous mtime: 1720271770.0120957, current mtime: 1720271772.0187562
+C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html notified as changed. Signal results: [(<function template_changed at 0x0000020DF78AE840>, True), (<function translation_file_changed at 0x0000020DF8AB3CE0>, None)].
+(0.000) 
+                SELECT VERSION(),
+                       @@sql_mode,
+                       @@default_storage_engine,
+                       @@sql_auto_is_null,
+                       @@lower_case_table_names,
+                       CONVERT_TZ('2001-01-01 01:00:00', 'UTC', 'UTC') IS NOT NULL
+            ; args=None; alias=default
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2024-07-06 13:16:28.578339' AND `django_session`.`session_key` = 'pa39igk4yosm9a43vepab7hl7msthl8n') LIMIT 21; args=('2024-07-06 13:16:28.578339', 'pa39igk4yosm9a43vepab7hl7msthl8n'); alias=default
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT `core_election`.`id_election`, `core_election`.`subject`, `core_election`.`start_date`, `core_election`.`end_date` FROM `core_election` WHERE `core_election`.`id_election` = 1 LIMIT 21; args=(1,); alias=default
+(0.016) SELECT `core_demandcandidature`.`id_demand_candidature`, `core_demandcandidature`.`status`, `core_demandcandidature`.`election_id`, `core_demandcandidature`.`date`, `core_demandcandidature`.`user_id`, `core_demandcandidature`.`motivation` FROM `core_demandcandidature` WHERE `core_demandcandidature`.`election_id` = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT 1 AS `a` FROM `auth_group` INNER JOIN `auth_user_groups` ON (`auth_group`.`id` = `auth_user_groups`.`group_id`) WHERE (`auth_user_groups`.`user_id` = 1 AND `auth_group`.`name` = 'Candidates') LIMIT 1; args=(1, 1, 'Candidates'); alias=default
+(0.000) SELECT `core_demandcandidature`.`id_demand_candidature`, `core_demandcandidature`.`status`, `core_demandcandidature`.`election_id`, `core_demandcandidature`.`date`, `core_demandcandidature`.`user_id`, `core_demandcandidature`.`motivation` FROM `core_demandcandidature` WHERE `core_demandcandidature`.`election_id` = 1; args=(1,); alias=default
+(0.015) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 4 LIMIT 21; args=(4,); alias=default
+"GET /electionDemands/1 HTTP/1.1" 200 3412
+"GET /static/css/custom-css.css HTTP/1.1" 304 0
+File C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html previous mtime: 1720271772.0187562, current mtime: 1720271811.8192303
+C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html notified as changed. Signal results: [(<function template_changed at 0x0000020DF78AE840>, True), (<function translation_file_changed at 0x0000020DF8AB3CE0>, None)].
+File C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html previous mtime: 1720271811.8192303, current mtime: 1720271817.0192273
+C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html notified as changed. Signal results: [(<function template_changed at 0x0000020DF78AE840>, True), (<function translation_file_changed at 0x0000020DF8AB3CE0>, None)].
+File C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html previous mtime: 1720271817.0192273, current mtime: 1720271820.9538393
+C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html notified as changed. Signal results: [(<function template_changed at 0x0000020DF78AE840>, True), (<function translation_file_changed at 0x0000020DF8AB3CE0>, None)].
+File C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html previous mtime: 1720271820.9538393, current mtime: 1720271823.2467878
+C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html notified as changed. Signal results: [(<function template_changed at 0x0000020DF78AE840>, True), (<function translation_file_changed at 0x0000020DF8AB3CE0>, None)].
+File C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html previous mtime: 1720271823.2467878, current mtime: 1720271827.6058846
+C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html notified as changed. Signal results: [(<function template_changed at 0x0000020DF78AE840>, True), (<function translation_file_changed at 0x0000020DF8AB3CE0>, None)].
+File C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html previous mtime: 1720271827.6058846, current mtime: 1720271830.2546575
+C:\Users\PC\projects\voting sys\voting\templates\electionDemands.html notified as changed. Signal results: [(<function template_changed at 0x0000020DF78AE840>, True), (<function translation_file_changed at 0x0000020DF8AB3CE0>, None)].
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2024-07-06 13:17:17.730205' AND `django_session`.`session_key` = 'pa39igk4yosm9a43vepab7hl7msthl8n') LIMIT 21; args=('2024-07-06 13:17:17.730205', 'pa39igk4yosm9a43vepab7hl7msthl8n'); alias=default
+(0.016) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT 1 AS `a` FROM `auth_group` INNER JOIN `auth_user_groups` ON (`auth_group`.`id` = `auth_user_groups`.`group_id`) WHERE (`auth_user_groups`.`user_id` = 1 AND `auth_group`.`name` = 'Candidates') LIMIT 1; args=(1, 1, 'Candidates'); alias=default
+"GET /addElection/ HTTP/1.1" 200 3539
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2024-07-06 13:17:19.443582' AND `django_session`.`session_key` = 'pa39igk4yosm9a43vepab7hl7msthl8n') LIMIT 21; args=('2024-07-06 13:17:19.443582', 'pa39igk4yosm9a43vepab7hl7msthl8n'); alias=default
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT 1 AS `a` FROM `auth_group` INNER JOIN `auth_user_groups` ON (`auth_group`.`id` = `auth_user_groups`.`group_id`) WHERE (`auth_user_groups`.`user_id` = 1 AND `auth_group`.`name` = 'Candidates') LIMIT 1; args=(1, 1, 'Candidates'); alias=default
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user`; args=(); alias=default
+"GET /listUsers/ HTTP/1.1" 200 3707
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2024-07-06 13:17:24.590952' AND `django_session`.`session_key` = 'pa39igk4yosm9a43vepab7hl7msthl8n') LIMIT 21; args=('2024-07-06 13:17:24.590952', 'pa39igk4yosm9a43vepab7hl7msthl8n'); alias=default
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT `core_election`.`id_election`, `core_election`.`subject`, `core_election`.`start_date`, `core_election`.`end_date` FROM `core_election`; args=(); alias=default
+(0.000) SELECT COUNT(*) AS `__count` FROM `core_demandcandidature` WHERE `core_demandcandidature`.`election_id` = 1; args=(1,); alias=default
+(0.000) SELECT COUNT(*) AS `__count` FROM `core_demandcandidature` WHERE `core_demandcandidature`.`election_id` = 2; args=(2,); alias=default
+(0.016) SELECT COUNT(*) AS `__count` FROM `core_demandcandidature` WHERE `core_demandcandidature`.`election_id` = 3; args=(3,); alias=default
+(0.000) SELECT 1 AS `a` FROM `auth_group` INNER JOIN `auth_user_groups` ON (`auth_group`.`id` = `auth_user_groups`.`group_id`) WHERE (`auth_user_groups`.`user_id` = 1 AND `auth_group`.`name` = 'Candidates') LIMIT 1; args=(1, 1, 'Candidates'); alias=default
+"GET /listElectionsAdmin/ HTTP/1.1" 200 3982
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2024-07-06 13:17:26.945524' AND `django_session`.`session_key` = 'pa39igk4yosm9a43vepab7hl7msthl8n') LIMIT 21; args=('2024-07-06 13:17:26.945524', 'pa39igk4yosm9a43vepab7hl7msthl8n'); alias=default
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT 1 AS `a` FROM `auth_group` INNER JOIN `auth_user_groups` ON (`auth_group`.`id` = `auth_user_groups`.`group_id`) WHERE (`auth_user_groups`.`user_id` = 1 AND `auth_group`.`name` = 'Candidates') LIMIT 1; args=(1, 1, 'Candidates'); alias=default
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user`; args=(); alias=default
+"GET /listUsers/ HTTP/1.1" 200 3707
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2024-07-06 13:17:36.734044' AND `django_session`.`session_key` = 'pa39igk4yosm9a43vepab7hl7msthl8n') LIMIT 21; args=('2024-07-06 13:17:36.734044', 'pa39igk4yosm9a43vepab7hl7msthl8n'); alias=default
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT 1 AS `a` FROM `auth_group` INNER JOIN `auth_user_groups` ON (`auth_group`.`id` = `auth_user_groups`.`group_id`) WHERE (`auth_user_groups`.`user_id` = 1 AND `auth_group`.`name` = 'Candidates') LIMIT 1; args=(1, 1, 'Candidates'); alias=default
+"GET /addElection/ HTTP/1.1" 200 3539
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2024-07-06 13:17:38.407749' AND `django_session`.`session_key` = 'pa39igk4yosm9a43vepab7hl7msthl8n') LIMIT 21; args=('2024-07-06 13:17:38.407749', 'pa39igk4yosm9a43vepab7hl7msthl8n'); alias=default
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT 1 AS `a` FROM `auth_group` INNER JOIN `auth_user_groups` ON (`auth_group`.`id` = `auth_user_groups`.`group_id`) WHERE (`auth_user_groups`.`user_id` = 1 AND `auth_group`.`name` = 'Candidates') LIMIT 1; args=(1, 1, 'Candidates'); alias=default
+(0.015) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user`; args=(); alias=default
+"GET /listUsers/ HTTP/1.1" 200 3707
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2024-07-06 13:17:50.113996' AND `django_session`.`session_key` = 'pa39igk4yosm9a43vepab7hl7msthl8n') LIMIT 21; args=('2024-07-06 13:17:50.113996', 'pa39igk4yosm9a43vepab7hl7msthl8n'); alias=default
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT `core_election`.`id_election`, `core_election`.`subject`, `core_election`.`start_date`, `core_election`.`end_date` FROM `core_election`; args=(); alias=default
+(0.000) SELECT COUNT(*) AS `__count` FROM `core_demandcandidature` WHERE `core_demandcandidature`.`election_id` = 1; args=(1,); alias=default
+(0.000) SELECT COUNT(*) AS `__count` FROM `core_demandcandidature` WHERE `core_demandcandidature`.`election_id` = 2; args=(2,); alias=default
+(0.000) SELECT COUNT(*) AS `__count` FROM `core_demandcandidature` WHERE `core_demandcandidature`.`election_id` = 3; args=(3,); alias=default
+(0.000) SELECT 1 AS `a` FROM `auth_group` INNER JOIN `auth_user_groups` ON (`auth_group`.`id` = `auth_user_groups`.`group_id`) WHERE (`auth_user_groups`.`user_id` = 1 AND `auth_group`.`name` = 'Candidates') LIMIT 1; args=(1, 1, 'Candidates'); alias=default
+"GET /listElectionsAdmin/ HTTP/1.1" 200 3982
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2024-07-06 13:17:53.923196' AND `django_session`.`session_key` = 'pa39igk4yosm9a43vepab7hl7msthl8n') LIMIT 21; args=('2024-07-06 13:17:53.923196', 'pa39igk4yosm9a43vepab7hl7msthl8n'); alias=default
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE `django_session`.`session_key` = 'pa39igk4yosm9a43vepab7hl7msthl8n' LIMIT 21; args=('pa39igk4yosm9a43vepab7hl7msthl8n',); alias=default
+(0.031) DELETE FROM `django_session` WHERE `django_session`.`session_key` IN ('pa39igk4yosm9a43vepab7hl7msthl8n'); args=('pa39igk4yosm9a43vepab7hl7msthl8n',); alias=default
+"GET /signout HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 3814
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`username` = 'fati' LIMIT 21; args=('fati',); alias=default
+(0.000) SELECT 1 AS `a` FROM `django_session` WHERE `django_session`.`session_key` = 'lv8rsbomhxeiade9sl4cjzzi096iitxp' LIMIT 1; args=(1, 'lv8rsbomhxeiade9sl4cjzzi096iitxp'); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.000) INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES ('lv8rsbomhxeiade9sl4cjzzi096iitxp', 'e30:1sQ5In:xNqS8qFUcv_43OksaRc5kaAcRbsQp3vd-C3itqOxmOg', '2024-07-20 13:18:09.557400'); args=('lv8rsbomhxeiade9sl4cjzzi096iitxp', 'e30:1sQ5In:xNqS8qFUcv_43OksaRc5kaAcRbsQp3vd-C3itqOxmOg', '2024-07-20 13:18:09.557400'); alias=default
+(0.032) COMMIT; args=None; alias=default
+(0.000) UPDATE `auth_user` SET `last_login` = '2024-07-06 13:18:09.596743' WHERE `auth_user`.`id` = 4; args=('2024-07-06 13:18:09.596743', 4); alias=default
+(0.000) BEGIN; args=None; alias=default
+(0.000) UPDATE `django_session` SET `session_data` = '.eJxVjEEOwiAQAP_C2RAKdAGP3n0DWZatVA1NSnsy_l1JetDrzGReIuK-lbg3XuOcxVlYcfplCenBtYt8x3pbJC11W-ckeyIP2-R1yfy8HO3foGArfesUgmIgImROKRMHNVnvgx6NYxiNtsZYQG08TOQghxTAZ_cth4GSeH8A9sA4Qg:1sQ5In:6HHWPtHLJftmsHG_mxRdLTrlaIqbsSHFTll7HMz8HlQ', `expire_date` = '2024-07-20 13:18:09.605991' WHERE `django_session`.`session_key` = 'lv8rsbomhxeiade9sl4cjzzi096iitxp'; args=('.eJxVjEEOwiAQAP_C2RAKdAGP3n0DWZatVA1NSnsy_l1JetDrzGReIuK-lbg3XuOcxVlYcfplCenBtYt8x3pbJC11W-ckeyIP2-R1yfy8HO3foGArfesUgmIgImROKRMHNVnvgx6NYxiNtsZYQG08TOQghxTAZ_cth4GSeH8A9sA4Qg:1sQ5In:6HHWPtHLJftmsHG_mxRdLTrlaIqbsSHFTll7HMz8HlQ', '2024-07-20 13:18:09.605991', 'lv8rsbomhxeiade9sl4cjzzi096iitxp'); alias=default
+(0.000) COMMIT; args=None; alias=default
+"POST / HTTP/1.1" 302 0
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2024-07-06 13:18:09.630508' AND `django_session`.`session_key` = 'lv8rsbomhxeiade9sl4cjzzi096iitxp') LIMIT 21; args=('2024-07-06 13:18:09.630508', 'lv8rsbomhxeiade9sl4cjzzi096iitxp'); alias=default
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT `core_election`.`id_election`, `core_election`.`subject`, `core_election`.`start_date`, `core_election`.`end_date` FROM `core_election`; args=(); alias=default
+(0.000) SELECT 1 AS `a` FROM `auth_group` INNER JOIN `auth_user_groups` ON (`auth_group`.`id` = `auth_user_groups`.`group_id`) WHERE (`auth_user_groups`.`user_id` = 4 AND `auth_group`.`name` = 'Candidates') LIMIT 1; args=(1, 4, 'Candidates'); alias=default
+"GET /listElections/ HTTP/1.1" 200 4583
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2024-07-06 13:20:07.777697' AND `django_session`.`session_key` = 'lv8rsbomhxeiade9sl4cjzzi096iitxp') LIMIT 21; args=('2024-07-06 13:20:07.777697', 'lv8rsbomhxeiade9sl4cjzzi096iitxp'); alias=default
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT `core_election`.`id_election`, `core_election`.`subject`, `core_election`.`start_date`, `core_election`.`end_date` FROM `core_election` WHERE `core_election`.`id_election` = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT 1 AS `a` FROM `auth_group` INNER JOIN `auth_user_groups` ON (`auth_group`.`id` = `auth_user_groups`.`group_id`) WHERE (`auth_user_groups`.`user_id` = 4 AND `auth_group`.`name` = 'Candidates') LIMIT 1; args=(1, 4, 'Candidates'); alias=default
+(0.000) SELECT `core_candidate`.`id_candidate`, `core_candidate`.`user_id`, `core_candidate`.`points`, `core_candidate`.`election_id` FROM `core_candidate` WHERE `core_candidate`.`election_id` = 2; args=(2,); alias=default
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 3 LIMIT 21; args=(3,); alias=default
+"GET /vote/2 HTTP/1.1" 200 3522
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2024-07-06 13:20:13.848851' AND `django_session`.`session_key` = 'lv8rsbomhxeiade9sl4cjzzi096iitxp') LIMIT 21; args=('2024-07-06 13:20:13.848851', 'lv8rsbomhxeiade9sl4cjzzi096iitxp'); alias=default
+(0.016) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT `core_election`.`id_election`, `core_election`.`subject`, `core_election`.`start_date`, `core_election`.`end_date` FROM `core_election` WHERE `core_election`.`id_election` = 3 LIMIT 21; args=(3,); alias=default
+(0.000) SELECT `core_candidate`.`id_candidate`, `core_candidate`.`user_id`, `core_candidate`.`points`, `core_candidate`.`election_id` FROM `core_candidate` WHERE `core_candidate`.`election_id` = 3; args=(3,); alias=default
+(0.000) SELECT COUNT(*) AS `__count` FROM `core_vote` WHERE `core_vote`.`candidate_id` = 4; args=(4,); alias=default
+(0.000) SELECT COUNT(*) AS `__count` FROM `core_vote` WHERE `core_vote`.`candidate_id` = 4; args=(4,); alias=default
+(0.000) SELECT 1 AS `a` FROM `auth_group` INNER JOIN `auth_user_groups` ON (`auth_group`.`id` = `auth_user_groups`.`group_id`) WHERE (`auth_user_groups`.`user_id` = 4 AND `auth_group`.`name` = 'Candidates') LIMIT 1; args=(1, 4, 'Candidates'); alias=default
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 3 LIMIT 21; args=(3,); alias=default
+"GET /resultsElection/3/ HTTP/1.1" 200 3139
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2024-07-06 13:20:18.710490' AND `django_session`.`session_key` = 'lv8rsbomhxeiade9sl4cjzzi096iitxp') LIMIT 21; args=('2024-07-06 13:20:18.710490', 'lv8rsbomhxeiade9sl4cjzzi096iitxp'); alias=default
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT `core_election`.`id_election`, `core_election`.`subject`, `core_election`.`start_date`, `core_election`.`end_date` FROM `core_election`; args=(); alias=default
+(0.000) SELECT 1 AS `a` FROM `auth_group` INNER JOIN `auth_user_groups` ON (`auth_group`.`id` = `auth_user_groups`.`group_id`) WHERE (`auth_user_groups`.`user_id` = 4 AND `auth_group`.`name` = 'Candidates') LIMIT 1; args=(1, 4, 'Candidates'); alias=default
+"GET /listElections/ HTTP/1.1" 200 4327
+(0.015) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2024-07-06 13:20:19.669072' AND `django_session`.`session_key` = 'lv8rsbomhxeiade9sl4cjzzi096iitxp') LIMIT 21; args=('2024-07-06 13:20:19.669072', 'lv8rsbomhxeiade9sl4cjzzi096iitxp'); alias=default
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT 1 AS `a` FROM `auth_group` INNER JOIN `auth_user_groups` ON (`auth_group`.`id` = `auth_user_groups`.`group_id`) WHERE (`auth_user_groups`.`user_id` = 4 AND `auth_group`.`name` = 'Candidates') LIMIT 1; args=(1, 4, 'Candidates'); alias=default
+(0.000) SELECT `core_demandcandidature`.`id_demand_candidature`, `core_demandcandidature`.`status`, `core_demandcandidature`.`election_id`, `core_demandcandidature`.`date`, `core_demandcandidature`.`user_id`, `core_demandcandidature`.`motivation` FROM `core_demandcandidature` WHERE `core_demandcandidature`.`user_id` = 4; args=(4,); alias=default
+(0.000) SELECT `core_election`.`id_election`, `core_election`.`subject`, `core_election`.`start_date`, `core_election`.`end_date` FROM `core_election` WHERE `core_election`.`id_election` = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT `core_election`.`id_election`, `core_election`.`subject`, `core_election`.`start_date`, `core_election`.`end_date` FROM `core_election` WHERE `core_election`.`id_election` = 2 LIMIT 21; args=(2,); alias=default
+"GET /listDemandCandidature/ HTTP/1.1" 200 4662
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None; alias=default
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2024-07-06 13:20:32.703272' AND `django_session`.`session_key` = 'lv8rsbomhxeiade9sl4cjzzi096iitxp') LIMIT 21; args=('2024-07-06 13:20:32.703272', 'lv8rsbomhxeiade9sl4cjzzi096iitxp'); alias=default
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 4 LIMIT 21; args=(4,); alias=default
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE `django_session`.`session_key` = 'lv8rsbomhxeiade9sl4cjzzi096iitxp' LIMIT 21; args=('lv8rsbomhxeiade9sl4cjzzi096iitxp',); alias=default
+(0.047) DELETE FROM `django_session` WHERE `django_session`.`session_key` IN ('lv8rsbomhxeiade9sl4cjzzi096iitxp'); args=('lv8rsbomhxeiade9sl4cjzzi096iitxp',); alias=default
+"GET /signout HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 3814

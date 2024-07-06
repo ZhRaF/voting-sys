@@ -4,7 +4,7 @@
 {% block content %}
 <h1>List of Candidates for Election</h1>
 
-<form method="post" action="{% url 'addVote' id_user=user.id id_election=id_election %}">
+<form method="post" action="{% url 'addVote'  id_election=id_election %}">
     {% csrf_token %}
     <div class="candidates-container">
         {% for candidate in candidates %}
