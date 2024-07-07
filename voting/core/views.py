@@ -135,7 +135,7 @@ def activate(request, uidb64, token):
     HttpResponse: Redirect to the signin page or raise Http404 if invalid.
     """
     try:
-        uid = force_text(urlsafe_base64_decode(uidb64))
+        uid = force_str(urlsafe_base64_decode(uidb64))
         user = User.objects.get(pk=uid)
     except (TypeError, ValueError, OverflowError, User.DoesNotExist) as e:
         logger.error(f'Activation failed: {e}')
