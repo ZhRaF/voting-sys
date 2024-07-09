@@ -363,11 +363,11 @@ def list_elections(request):
 
     for e in elections:
         vote = False
-        if e.end_date >= current_date and e.start_date <= current_date:
+        if (e.end_date >= current_date) and (e.start_date <= current_date):
             vote = True
         
         demand_candidature = False
-        if e.start_date > current_date:
+        if e.start_date > current_date and e.end_date > current_date:
             demand_candidature = True
 
 
